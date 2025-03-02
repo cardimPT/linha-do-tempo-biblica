@@ -1,0 +1,431 @@
+[
+    {
+      "nome": "Génesis",
+      "abreviacao": "Gn",
+      "testamento": "Antigo",
+      "periodo": {
+        "inicio": -2000,
+        "fim": -1500,
+        "descricao": "Relatos da Criação, Patriarcas (Abraão, Isaac, Jacob)."
+      },
+      "categoria": "Pentateuco"
+    },
+    {
+      "nome": "Êxodo",
+      "abreviacao": "Ex",
+      "testamento": "Antigo",
+      "periodo": {
+        "inicio": -1500,
+        "fim": -1250,
+        "descricao": "Libertação do Egito, Moisés, Dez Mandamentos."
+      },
+      "categoria": "Pentateuco"
+    },
+    {
+      "nome": "Levítico",
+      "abreviacao": "Lv",
+      "testamento": "Antigo",
+      "periodo": {
+        "inicio": -1446,
+        "fim": -1446,
+        "descricao": "Leis e rituais para os sacerdotes levitas."
+      },
+      "categoria": "Pentateuco"
+    },
+    {
+      "nome": "Números",
+      "abreviacao": "Nm",
+      "testamento": "Antigo",
+      "periodo": {
+        "inicio": -1446,
+        "fim": -1406,
+        "descricao": "Censo do povo de Israel e suas jornadas no deserto."
+      },
+      "categoria": "Pentateuco"
+    },
+    {
+      "nome": "Deuteronómio",
+      "abreviacao": "Dt",
+      "testamento": "Antigo",
+      "periodo": {
+        "inicio": -1406,
+        "fim": -1406,
+        "descricao": "Discursos finais de Moisés antes da entrada em Canaã."
+      },
+      "categoria": "Pentateuco"
+    },
+    {
+      "nome": "Josué",
+      "abreviacao": "Js",
+      "testamento": "Antigo",
+      "periodo": {
+        "inicio": -1406,
+        "fim": -1375,
+        "descricao": "Conquista de Canaã sob a liderança de Josué."
+      },
+      "categoria": "Históricos"
+    },
+    {
+      "nome": "Juízes",
+      "abreviacao": "Jz",
+      "testamento": "Antigo",
+      "periodo": {
+        "inicio": -1375,
+        "fim": -1050,
+        "descricao": "Ciclos de apostasia, opressão e libertação através de juízes."
+      },
+      "categoria": "Históricos"
+    },
+    {
+      "nome": "Rute",
+      "abreviacao": "Rt",
+      "testamento": "Antigo",
+      "periodo": {
+        "inicio": -1322,
+        "fim": -1322,
+        "descricao": "História de Rute, uma moabita que se torna ancestral de Davi."
+      },
+      "categoria": "Históricos"
+    },
+    {
+      "nome": "1 Samuel",
+      "abreviacao": "1Sm",
+      "testamento": "Antigo",
+      "periodo": {
+        "inicio": -1105,
+        "fim": -1015,
+        "descricao": "Transição de Juízes para a monarquia, Saul e o jovem Davi."
+      },
+      "categoria": "Históricos"
+    },
+    {
+      "nome": "2 Samuel",
+      "abreviacao": "2Sm",
+      "testamento": "Antigo",
+      "periodo": {
+        "inicio": -1015,
+        "fim": -975,
+        "descricao": "Reinado de Davi."
+      },
+      "categoria": "Históricos"
+    },
+    {
+      "nome": "1 Reis",
+      "abreviacao": "1Rs",
+      "testamento": "Antigo",
+      "periodo": {
+        "inicio": -975,
+        "fim": -850,
+        "descricao": "Reinado de Salomão, divisão do reino (Israel e Judá)."
+      },
+      "categoria": "Históricos"
+    },
+    {
+      "nome": "2 Reis",
+      "abreviacao": "2Rs",
+      "testamento": "Antigo",
+      "periodo": {
+        "inicio": -850,
+        "fim": -586,
+        "descricao": "Reis de Israel e Judá, exílio babilónico."
+      },
+      "categoria": "Históricos"
+    },
+    {
+      "nome": "1 Crónicas",
+      "abreviacao": "1Cr",
+      "testamento": "Antigo",
+      "periodo": {
+        "inicio": -1055,
+        "fim": -1015,
+        "descricao": "Genealogias e história de Davi (paralelo a 1 e 2 Samuel)."
+      },
+      "categoria": "Históricos"
+    },
+    {
+      "nome": "2 Crónicas",
+      "abreviacao": "2Cr",
+      "testamento": "Antigo",
+      "periodo": {
+        "inicio": -1015,
+        "fim": -538,
+        "descricao": "História de Judá, de Salomão ao exílio (paralelo a 1 e 2 Reis)."
+      },
+      "categoria": "Históricos"
+    },
+    {
+      "nome": "Esdras",
+      "abreviacao": "Ed",
+      "testamento": "Antigo",
+      "periodo": {
+        "inicio": -538,
+        "fim": -457,
+        "descricao": "Retorno do exílio, reconstrução do templo."
+      },
+      "categoria": "Históricos"
+    },
+    {
+      "nome": "Neemias",
+      "abreviacao": "Ne",
+      "testamento": "Antigo",
+      "periodo": {
+        "inicio": -445,
+        "fim": -425,
+        "descricao": "Reconstrução dos muros de Jerusalém."
+      },
+      "categoria": "Históricos"
+    },
+    {
+      "nome": "Ester",
+      "abreviacao": "Et",
+      "testamento": "Antigo",
+      "periodo": {
+        "inicio": -483,
+        "fim": -473,
+        "descricao": "Ester, rainha judia na Pérsia, salva seu povo."
+      },
+      "categoria": "Históricos"
+    },
+    {
+      "nome": "Jó",
+      "abreviacao": "Jó",
+      "testamento": "Antigo",
+      "periodo": {
+        "inicio": -2000,
+        "fim": -1800,
+        "descricao": "Sofrimento de Jó e questões sobre a justiça divina."
+      },
+      "categoria": "Poéticos"
+    },
+    {
+      "nome": "Salmos",
+      "abreviacao": "Sl",
+      "testamento": "Antigo",
+      "periodo": {
+        "inicio": -1410,
+        "fim": -450,
+        "descricao": "Coleção de cânticos, poemas e orações."
+      },
+      "categoria": "Poéticos"
+    },
+    {
+      "nome": "Provérbios",
+      "abreviacao": "Pv",
+      "testamento": "Antigo",
+      "periodo": {
+        "inicio": -970,
+        "fim": -700,
+        "descricao": "Sabedoria prática para a vida diária."
+      },
+      "categoria": "Poéticos"
+    },
+    {
+      "nome": "Eclesiastes",
+      "abreviacao": "Ec",
+      "testamento": "Antigo",
+      "periodo": {
+        "inicio": -940,
+        "fim": -931,
+        "descricao": "Reflexões sobre o sentido da vida."
+      },
+      "categoria": "Poéticos"
+    },
+    {
+      "nome": "Cântico dos Cânticos",
+      "abreviacao": "Ct",
+      "testamento": "Antigo",
+      "periodo": {
+        "inicio": -971,
+        "fim": -931,
+        "descricao": "Poema de amor entre um noivo e sua noiva."
+      },
+      "categoria": "Poéticos"
+    },
+    {
+      "nome": "Isaías",
+      "abreviacao": "Is",
+      "testamento": "Antigo",
+      "periodo": {
+        "inicio": -740,
+        "fim": -680,
+        "descricao": "Profecias sobre julgamento e restauração de Judá e Israel."
+      },
+      "categoria": "Profetas Maiores"
+    },
+    {
+      "nome": "Jeremias",
+      "abreviacao": "Jr",
+      "testamento": "Antigo",
+      "periodo": {
+        "inicio": -627,
+        "fim": -580,
+        "descricao": "Profecias de Jeremias durante os últimos anos de Judá e o exílio."
+      },
+      "categoria": "Profetas Maiores"
+    },
+    {
+      "nome": "Lamentações",
+      "abreviacao": "Lm",
+      "testamento": "Antigo",
+      "periodo": {
+        "inicio": -586,
+        "fim": -586,
+        "descricao": "Lamentos sobre a destruição de Jerusalém."
+      },
+      "categoria": "Profetas Maiores"
+    },
+    {
+      "nome": "Ezequiel",
+      "abreviacao": "Ez",
+      "testamento": "Antigo",
+      "periodo": {
+        "inicio": -593,
+        "fim": -571,
+        "descricao": "Profecias de Ezequiel durante o exílio na Babilónia."
+      },
+      "categoria": "Profetas Maiores"
+    },
+    {
+      "nome": "Daniel",
+      "abreviacao": "Dn",
+      "testamento": "Antigo",
+      "periodo": {
+        "inicio": -605,
+        "fim": -530,
+        "descricao": "Histórias e visões de Daniel na Babilónia e na Pérsia."
+      },
+      "categoria": "Profetas Maiores"
+    },
+    {
+      "nome": "Oseias",
+      "abreviacao": "Os",
+      "testamento": "Antigo",
+      "periodo": {
+        "inicio": -755,
+        "fim": -715,
+        "descricao": "Profecias sobre a infidelidade de Israel e o amor de Deus."
+      },
+      "categoria": "Profetas Menores"
+    },
+    {
+      "nome": "Joel",
+      "abreviacao": "Jl",
+      "testamento": "Antigo",
+      "periodo": {
+        "inicio": -835,
+        "fim": -796,
+        "descricao": "Profecias sobre o Dia do Senhor e o derramamento do Espírito."
+      },
+      "categoria": "Profetas Menores"
+    },
+    {
+      "nome": "Amós",
+      "abreviacao": "Am",
+      "testamento": "Antigo",
+      "periodo": {
+        "inicio": -760,
+        "fim": -750,
+        "descricao": "Profecias de justiça social contra Israel."
+      },
+      "categoria": "Profetas Menores"
+    },
+    {
+      "nome": "Obadias",
+      "abreviacao": "Ob",
+      "testamento": "Antigo",
+      "periodo": {
+        "inicio": -848,
+        "fim": -841,
+        "descricao": "Profecia contra Edom."
+      },
+      "categoria": "Profetas Menores"
+    },
+    {
+      "nome": "Jonas",
+      "abreviacao": "Jn",
+      "testamento": "Antigo",
+      "periodo": {
+        "inicio": -790,
+        "fim": -760,
+        "descricao": "Jonas é enviado para pregar a Nínive."
+      },
+      "categoria": "Profetas Menores"
+    },
+    {
+      "nome": "Miqueias",
+      "abreviacao": "Mq",
+      "testamento": "Antigo",
+      "periodo": {
+        "inicio": -750,
+        "fim": -686,
+        "descricao": "Profecias sobre julgamento e esperança para Judá e Israel."
+      },
+      "categoria": "Profetas Menores"
+    },
+    {
+      "nome": "Naum",
+      "abreviacao": "Na",
+      "testamento": "Antigo",
+      "periodo": {
+        "inicio": -663,
+        "fim": -612,
+        "descricao": "Profecia sobre a queda de Nínive."
+      },
+      "categoria": "Profetas Menores"
+    },
+    {
+      "nome": "Habacuque",
+      "abreviacao": "Hc",
+      "testamento": "Antigo",
+      "periodo": {
+        "inicio": -612,
+        "fim": -605,
+        "descricao": "Diálogo entre Habacuque e Deus sobre a justiça e o sofrimento."
+      },
+      "categoria": "Profetas Menores"
+    },
+    {
+      "nome": "Sofonias",
+      "abreviacao": "Sf",
+      "testamento": "Antigo",
+      "periodo": {
+        "inicio": -640,
+        "fim": -621,
+        "descricao": "Profecias sobre o Dia do Senhor e a restauração de Judá."
+      },
+      "categoria": "Profetas Menores"
+    },
+    {
+      "nome": "Ageu",
+      "abreviacao": "Ag",
+      "testamento": "Antigo",
+      "periodo": {
+        "inicio": -520,
+        "fim": -520,
+        "descricao": "Exortações para reconstruir o templo."
+      },
+      "categoria": "Profetas Menores"
+    },
+    {
+      "nome": "Zacarias",
+      "abreviacao": "Zc",
+      "testamento": "Antigo",
+      "periodo": {
+        "inicio": -520,
+        "fim": -480,
+        "descricao": "Visões e profecias sobre a restauração de Jerusalém."
+      },
+      "categoria": "Profetas Menores"
+    },
+    {
+      "nome": "Malaquias",
+      "abreviacao": "Ml",
+      "testamento": "Antigo",
+      "periodo": {
+        "inicio": -440,
+        "fim": -400,
+        "descricao": "Chamado ao arrependimento e promessas de bênção."
+      },
+      "categoria": "Profetas Menores"
+    }
+  ]

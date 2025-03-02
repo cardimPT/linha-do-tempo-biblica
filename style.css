@@ -1,0 +1,49 @@
+/* Estilos gerais e para mobile-first */
+body {
+    font-family: sans-serif; /* Escolha uma fonte legível */
+    margin: 0; /* Remova as margens padrão do body */
+    padding: 0;
+    background-color: #f0f0f0; /* Cor de fundo geral */
+    color: #333; /* Cor do texto geral */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+main {
+    padding: 10px;
+}
+
+#timeline {
+    width: 100%; /* Ocupa toda a largura disponível */
+    height: 400px; /* Defina uma altura inicial (pode ser ajustada) */
+    border: 1px solid #ccc;
+}
+
+/* Estilos para as categorias (opcional, personalize as cores) */
+.vis-item.pentateuco { background-color: #f0e68c; }
+.vis-item.historicos { background-color: #add8e6; }
+.vis-item.poeticos { background-color: #98fb98; }
+.vis-item.profetas-maiores { background-color: #ffb6c1; }
+.vis-item.profetas-menores { background-color: #e0ffff; }
+.vis-item.evangelhos { background-color: #ffffe0; }
+.vis-item.atos { background-color: #d8bfd8; }
+.vis-item.epistolas-paulinas { background-color: #ffa07a; }
+.vis-item.epistolas-gerais { background-color: #20b2aa; }
+.vis-item.profecia { background-color: #778899; }
+
+/* Media query para ecrãs maiores (exemplo) */
+@media (min-width: 768px) { /* Tablets e desktops */
+    #timeline {
+        width: 80%; /* Reduz a largura em ecrãs maiores */
+        margin: 20px auto; /* Centraliza horizontalmente */
+        height: 500px; /* Ajusta a altura */
+    }
+    body{
+      font-size: 18px; /*aumentar tamanho de fonte em ecrãs maiores*/
+    }
+}
