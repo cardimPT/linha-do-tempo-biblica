@@ -36,10 +36,23 @@ async function criarLinhaDoTempo() {
     const options = {
         timeAxis: { scale: 'year', step: 100 },
         orientation: 'top',
-        showCurrentTime: false,
-        //zoomMin: 1000 * 60 * 60 * 24 * 30 * 12 * 10,  // zoom minimo 10 anos
-        //zoomMax: 1000 * 60 * 60 * 24 * 365 * 100,   // zoom maximo 100 anos
-        // Outras opções: https://visjs.github.io/vis-timeline/docs/timeline/
+        showCurrentTime: false, // Já estava, mantenha
+        // Adicione essas opções:
+        showMinorLabels: true,  // Mostrar rótulos menores (anos intermediários)
+        format: {
+            minorLabels: {
+                year: 'YYYY'   // Formato para os rótulos menores (só o ano)
+            },
+            majorLabels: {
+                year: 'YYYY'  // Formato para os rótulos maiores (só o ano)
+            }
+        },
+        // Ajustar zoom (opcional, mas recomendado):
+        zoomMin: 1000 * 60 * 60 * 24 * 365 * 10, // Zoom mínimo: 10 anos (em milissegundos)
+        zoomMax: 1000 * 60 * 60 * 24 * 365 * 5000, // Zoom máximo: 5000 anos
+        // Ajuste a visibilidade inicial
+         start: -2500,
+         end: 500
     };
 
     // Criar a linha do tempo
