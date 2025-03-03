@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <title>Linha do Tempo Bíblica</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+
+    <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+
+</head>
+<body>
+    <h1>Linha do Tempo Bíblica (Antigo Testamento)</h1>
+
+    <div id="timeline-embed" style="width: 100%; height: 600px;"></div>
+
+    <script type="text/javascript">
+        // URL da sua planilha publicada
+        const timeline_config = {
+            source: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRnZBy8qysl3ms4asWL_Ve8koVu2CjlZoO6Dr3wAm1kOxIo06HRQ4KWnwz4jTDh60asW99Z66E2jkGz/pubhtml', // <--- SUBSTITUA ISSO
+            // Outras opções (opcional):
+            // start_at_end: true,  // Começar no final da linha do tempo
+            // start_at_slide: 2,  // Começar em um slide específico
+            // language: 'pt'      // Definir o idioma (se disponível)
+        };
+
+        window.timeline = new TL.Timeline('timeline-embed', timeline_config);
+    </script>
+</body>
+</html>

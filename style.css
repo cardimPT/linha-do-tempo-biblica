@@ -1,76 +1,46 @@
-/* Estilos gerais e para mobile-first */
+/* Estilos gerais */
 body {
-    font-family: sans-serif; /* Escolha uma fonte legível */
-    margin: 0; /* Remova as margens padrão do body */
+    font-family: sans-serif;
+    margin: 0;
     padding: 0;
-    background-color: #f0f0f0; /* Cor de fundo geral */
-    color: #333; /* Cor do texto geral */
+    background-color: #f0f0f0;
+    color: #333;
 }
 
-header {
+h1 {
+    text-align: center;
+    padding: 20px;
     background-color: #333;
     color: #fff;
-    padding: 10px;
-    text-align: center;
+    margin: 0;
 }
 
-main {
-    padding: 10px;
+/* Estilos da TimelineJS (opcional, para customização) */
+.tl-timeline {
+    /* Estilos gerais da linha do tempo */
 }
 
-/* Estilos gerais da linha do tempo (Vis.js) */
-#timeline {
-    width: 90%; /* Ajuste conforme necessário */
-    margin: 20px auto; /* Centraliza */
-    border: 1px solid #ccc;
-    font-family: sans-serif; /* Fonte mais legível */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra suave */
+.tl-slide {
+    /* Estilos para cada slide (evento/livro) */
 }
 
-/* Estilos para os itens (livros e eventos) */
-.vis-item {
-    border-radius: 5px; /* Bordas arredondadas */
-    border-width: 2px;
-    padding: 5px; /* Espaçamento interno */
-    font-size: 12px; /* Tamanho da fonte */
+.tl-text {
+    /* Estilos para o texto do slide */
 }
 
-/* Cores por categoria (já tinha, mas ajuste) */
-.vis-item.pentateuco { background-color: #f0e68c; border-color: #b8b064; }
-.vis-item.historicos { background-color: #add8e6; border-color: #7fb4c6;}
-.vis-item.poeticos { background-color: #98fb98; border-color: #68bb68;}
-.vis-item.profetas-maiores { background-color: #ffb6c1; border-color: #c98691;}
-.vis-item.profetas-menores { background-color: #e0ffff; border-color: #a9d9d9;}
-.vis-item.evento {background-color: #D3D3D3; border-color: #909090; }
-
-/* Estilos para os rótulos da escala de tempo */
-.vis-time-axis .vis-text {
-    font-size: 14px; /* Tamanho da fonte */
-    font-weight: bold; /* Negrito */
-    color: #555; /* Cor */
+.tl-headline {
+    /* Estilos para o título do slide */
 }
 
-/* Estilo para os pontos (eventos) */
-.vis-item.vis-point {
-   border-width: 5px;
-}
-
-/* Estilo para quando o item está selecionado */
-
-.vis-item.vis-selected {
-   background-color: #333; /* Cor ao selecionar*/
-   border-color: #222;
-   color: white;
+.tl-media {
+    /* Estilos para a mídia (imagem, vídeo, etc.) */
 }
  /* Ajustes para mobile */
 @media (max-width: 767px) { /* Celulares */
-    .vis-item {
-        font-size: 10px; /* Fonte menor em celulares */
+    .tl-headline {
+        font-size: 1em;
     }
-    .vis-time-axis .vis-text {
-        font-size: 12px; /* Fonte menor para a escala de tempo */
-    }
-    #timeline {
-      height: 300px; /*ajusta a altura para ecrãs mais pequenos*/
-    }
+  #timeline-embed{
+     height: 300px;
+  }
 }
