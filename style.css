@@ -1,46 +1,135 @@
-/* Estilos gerais */
+/* Estilos gerais e para mobile-first */
 body {
-    font-family: sans-serif;
+    font-family: sans-serif; /* Escolha uma fonte legível. Considere usar Google Fonts */
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
     color: #333;
 }
 
-h1 {
-    text-align: center;
-    padding: 20px;
+header {
     background-color: #333;
     color: #fff;
-    margin: 0;
+    padding: 10px;
+    text-align: center;
 }
 
-/* Estilos da TimelineJS (opcional, para customização) */
-.tl-timeline {
-    /* Estilos gerais da linha do tempo */
+main {
+    padding: 10px;
 }
 
-.tl-slide {
-    /* Estilos para cada slide (evento/livro) */
+/* Estilos da linha do tempo (Vis.js).  IMPORTANTE: Aplicar a .vis-timeline */
+#timeline, .vis-timeline { /* Aplica a ambos */
+    width: 90%;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    font-family: sans-serif;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    height: 400px; /* Altura inicial. Ajuste conforme necessário. */
 }
 
-.tl-text {
-    /* Estilos para o texto do slide */
+/* Estilos para os itens (livros e eventos) */
+.vis-item {
+    border-radius: 5px;
+    border-width: 2px; /* Reduzido um pouco */
+    padding: 5px;
+    font-size: 12px;
+    cursor: pointer; /* Adicionado: muda o cursor para uma mãozinha */
 }
 
-.tl-headline {
-    /* Estilos para o título do slide */
+/* Cores por categoria */
+.vis-item.pentateuco { background-color: #f0e68c; border-color: #b8b064; }
+.vis-item.historicos { background-color: #add8e6; border-color: #7fb4c6; }
+.vis-item.poeticos { background-color: #98fb98; border-color: #68bb68; }
+.vis-item.profetas-maiores { background-color: #ffb6c1; border-color: #c98691; }
+.vis-item.profetas-menores { background-color: #e0ffff; border-color: #a9d9d9; }
+.vis-item.evento { background-color: #D3D3D3; border-color: #909090; }
+
+
+/* Estilos para os rótulos da escala de tempo */
+.vis-time-axis .vis-text {
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
 }
 
-.tl-media {
-    /* Estilos para a mídia (imagem, vídeo, etc.) */
+/* Estilo para os pontos (eventos) */
+.vis-item.vis-point {
+    border-width: 3px; /* Reduzido */
 }
- /* Ajustes para mobile */
-@media (max-width: 767px) { /* Celulares */
-    .tl-headline {
-        font-size: 1em;
+
+/* Estilo para quando o item está selecionado */
+.vis-item.vis-selected {
+    background-color: #333;
+    border-color: #222;
+    color: white;
+}
+
+/* Estilos para os tooltips (opcional) */
+.vis-tooltip {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 12px;
+    /* Adicione outros estilos, se desejar */
+}
+
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Ajustes para mobile */
+@media (max-width: 767px) {
+    .vis-item {
+        font-size: 10px;
     }
-  #timeline-embed{
-     height: 300px;
-  }
+    .vis-time-axis .vis-text {
+        font-size: 12px;
+    }
+    /* IMPORTANTE: Aplicar também a .vis-timeline */
+    #timeline, .vis-timeline {
+        height: 300px;  /* Reduz a altura em telas pequenas */
+    }
+    .modal-content {
+        margin: 30% auto;  /* Ajuste a margem superior para telas menores */
+        width: 95%; /* Aumente a largura */
+    }
 }
