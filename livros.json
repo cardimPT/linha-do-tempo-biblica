@@ -4,9 +4,9 @@
       "abreviacao": "Gn",
       "testamento": "Antigo",
       "periodo": {
-        "inicio": -2000,
-        "fim": -1500,
-        "descricao": "Relatos da Criação, Patriarcas (Abraão, Isaac, Jacob)."
+        "inicio": -4000,
+        "fim": -1804,
+        "descricao": "A Criação e a Aliança de Deus"
       },
       "categoria": "Pentateuco"
     },
@@ -15,9 +15,9 @@
       "abreviacao": "Ex",
       "testamento": "Antigo",
       "periodo": {
-        "inicio": -1500,
-        "fim": -1250,
-        "descricao": "Libertação do Egito, Moisés, Dez Mandamentos."
+        "inicio": -1876,
+        "fim": -1446,
+        "descricao": "A Redenção e a Revelação de Deus"
       },
       "categoria": "Pentateuco"
     },
@@ -27,8 +27,8 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -1446,
-        "fim": -1446,
-        "descricao": "Leis e rituais para os sacerdotes levitas."
+        "fim": -1445,
+        "descricao": "O código de santidade do Deus Santo"
       },
       "categoria": "Pentateuco"
     },
@@ -39,7 +39,7 @@
       "periodo": {
         "inicio": -1446,
         "fim": -1406,
-        "descricao": "Censo do povo de Israel e suas jornadas no deserto."
+        "descricao": "O fracasso de fé de Israel"
       },
       "categoria": "Pentateuco"
     },
@@ -60,8 +60,8 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -1406,
-        "fim": -1375,
-        "descricao": "Conquista de Canaã sob a liderança de Josué."
+        "fim": -1350,
+        "descricao": "Possuindo a Terra Prometida"
       },
       "categoria": "Históricos"
     },
@@ -70,9 +70,9 @@
       "abreviacao": "Jz",
       "testamento": "Antigo",
       "periodo": {
-        "inicio": -1375,
-        "fim": -1050,
-        "descricao": "Ciclos de apostasia, opressão e libertação através de juízes."
+        "inicio": -1380,
+        "fim": -1045,
+        "descricao": "A Idade das Trevas da História de Israel"
       },
       "categoria": "Históricos"
     },
@@ -81,9 +81,9 @@
       "abreviacao": "Rt",
       "testamento": "Antigo",
       "periodo": {
-        "inicio": -1322,
-        "fim": -1322,
-        "descricao": "História de Rute, uma moabita que se torna ancestral de Davi."
+        "inicio": -1160,
+        "fim": -1100,
+        "descricao": "Vida piedosa numa época de impiedade"
       },
       "categoria": "Históricos"
     },
@@ -93,8 +93,8 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -1105,
-        "fim": -1015,
-        "descricao": "Transição de Juízes para a monarquia, Saul e o jovem Davi."
+        "fim": -1011,
+        "descricao": "Israel rejeita a Deus como Rei"
       },
       "categoria": "Históricos"
     },
@@ -103,9 +103,9 @@
       "abreviacao": "2Sm",
       "testamento": "Antigo",
       "periodo": {
-        "inicio": -1015,
-        "fim": -975,
-        "descricao": "Reinado de Davi."
+        "inicio": -1011,
+        "fim": -971,
+        "descricao": "Rei Davi, um homem segundo o coração de Deus"
       },
       "categoria": "Históricos"
     },
@@ -114,9 +114,9 @@
       "abreviacao": "1Rs",
       "testamento": "Antigo",
       "periodo": {
-        "inicio": -975,
-        "fim": -850,
-        "descricao": "Reinado de Salomão, divisão do reino (Israel e Judá)."
+        "inicio": -971,
+        "fim": -840,
+        "descricao": "O coração dividido de Salomão conduz ao reino dividido"
       },
       "categoria": "Históricos"
     },
@@ -125,9 +125,9 @@
       "abreviacao": "2Rs",
       "testamento": "Antigo",
       "periodo": {
-        "inicio": -850,
+        "inicio": -853,
         "fim": -586,
-        "descricao": "Reis de Israel e Judá, exílio babilónico."
+        "descricao": "A queda de Israel e de Judá"
       },
       "categoria": "Históricos"
     },
@@ -136,9 +136,9 @@
       "abreviacao": "1Cr",
       "testamento": "Antigo",
       "periodo": {
-        "inicio": -1055,
-        "fim": -1015,
-        "descricao": "Genealogias e história de Davi (paralelo a 1 e 2 Samuel)."
+        "inicio": -1004,
+        "fim": -971,
+        "descricao": "O reinado glorioso do rei Davi"
       },
       "categoria": "Históricos"
     },
@@ -147,9 +147,9 @@
       "abreviacao": "2Cr",
       "testamento": "Antigo",
       "periodo": {
-        "inicio": -1015,
+        "inicio": -971,
         "fim": -538,
-        "descricao": "História de Judá, de Salomão ao exílio (paralelo a 1 e 2 Reis)."
+        "descricao": "A fortuna de Salomão - a queda de Judá"
       },
       "categoria": "Históricos"
     },
@@ -159,8 +159,8 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -538,
-        "fim": -457,
-        "descricao": "Retorno do exílio, reconstrução do templo."
+        "fim": -456,
+        "descricao": "Judá retornando do Exílio"
       },
       "categoria": "Históricos"
     },
@@ -169,9 +169,9 @@
       "abreviacao": "Ne",
       "testamento": "Antigo",
       "periodo": {
-        "inicio": -445,
-        "fim": -425,
-        "descricao": "Reconstrução dos muros de Jerusalém."
+        "inicio": -444,
+        "fim": -420,
+        "descricao": "O terceiro retorno visando a reconstrução dos muros"
       },
       "categoria": "Históricos"
     },
