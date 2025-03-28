@@ -63,7 +63,7 @@
         "fim": -1350,
         "descricao": "Possuindo a Terra Prometida"
       },
-      "categoria": "Históricos"
+      "categoria": "Históricos: Pré-exílicos"
     },
     {
       "nome": "Juízes",
@@ -74,7 +74,7 @@
         "fim": -1045,
         "descricao": "A Idade das Trevas da História de Israel"
       },
-      "categoria": "Históricos"
+      "categoria": "Históricos: Pré-exílicos"
     },
     {
       "nome": "Rute",
@@ -85,7 +85,7 @@
         "fim": -1100,
         "descricao": "Vida piedosa numa época de impiedade"
       },
-      "categoria": "Históricos"
+      "categoria": "Históricos: Pré-exílicos"
     },
     {
       "nome": "1 Samuel",
@@ -96,7 +96,7 @@
         "fim": -1011,
         "descricao": "Israel rejeita a Deus como Rei"
       },
-      "categoria": "Históricos"
+      "categoria": "Históricos: Pré-exílicos"
     },
     {
       "nome": "2 Samuel",
@@ -107,7 +107,7 @@
         "fim": -971,
         "descricao": "Rei Davi, um homem segundo o coração de Deus"
       },
-      "categoria": "Históricos"
+      "categoria": "Históricos: Pré-exílicos"
     },
     {
       "nome": "1 Reis",
@@ -118,7 +118,7 @@
         "fim": -840,
         "descricao": "O coração dividido de Salomão conduz ao reino dividido"
       },
-      "categoria": "Históricos"
+      "categoria": "Históricos: Pré-exílicos"
     },
     {
       "nome": "2 Reis",
@@ -129,7 +129,7 @@
         "fim": -586,
         "descricao": "A queda de Israel e de Judá"
       },
-      "categoria": "Históricos"
+      "categoria": "Históricos: Pré-exílicos"
     },
     {
       "nome": "1 Crónicas",
@@ -140,7 +140,7 @@
         "fim": -971,
         "descricao": "O reinado glorioso do rei Davi"
       },
-      "categoria": "Históricos"
+      "categoria": "Históricos: Pré-exílicos"
     },
     {
       "nome": "2 Crónicas",
@@ -151,7 +151,7 @@
         "fim": -538,
         "descricao": "A fortuna de Salomão - a queda de Judá"
       },
-      "categoria": "Históricos"
+      "categoria": "Históricos: Pré-exílicos"
     },
     {
       "nome": "Esdras",
@@ -162,7 +162,7 @@
         "fim": -456,
         "descricao": "Judá retornando do Exílio"
       },
-      "categoria": "Históricos"
+      "categoria": "Históricos: Pós-exílico"
     },
     {
       "nome": "Neemias",
@@ -173,18 +173,18 @@
         "fim": -420,
         "descricao": "O terceiro retorno visando a reconstrução dos muros"
       },
-      "categoria": "Históricos"
+      "categoria": "Históricos: Pós-exílico"
     },
     {
       "nome": "Ester",
       "abreviacao": "Et",
       "testamento": "Antigo",
       "periodo": {
-        "inicio": -483,
+        "inicio": -479,
         "fim": -473,
         "descricao": "Ester, rainha judia na Pérsia, salva seu povo."
       },
-      "categoria": "Históricos"
+      "categoria": "Históricos: Pós-exílico"
     },
     {
       "nome": "Jó",
@@ -214,7 +214,7 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -970,
-        "fim": -700,
+        "fim": -930,
         "descricao": "Sabedoria prática para a vida diária."
       },
       "categoria": "Poéticos"
@@ -224,8 +224,8 @@
       "abreviacao": "Ec",
       "testamento": "Antigo",
       "periodo": {
-        "inicio": -940,
-        "fim": -931,
+        "inicio": -935,
+        "fim": -930,
         "descricao": "Reflexões sobre o sentido da vida."
       },
       "categoria": "Poéticos"
@@ -235,8 +235,8 @@
       "abreviacao": "Ct",
       "testamento": "Antigo",
       "periodo": {
-        "inicio": -971,
-        "fim": -931,
+        "inicio": -970,
+        "fim": -930,
         "descricao": "Poema de amor entre um noivo e sua noiva."
       },
       "categoria": "Poéticos"
@@ -250,7 +250,7 @@
         "fim": -680,
         "descricao": "Profecias sobre julgamento e restauração de Judá e Israel."
       },
-      "categoria": "Profetas Maiores"
+      "categoria": "Profetas Maiores: Pré-exílicos"
     },
     {
       "nome": "Jeremias",
@@ -258,10 +258,10 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -627,
-        "fim": -580,
+        "fim": -586,
         "descricao": "Profecias de Jeremias durante os últimos anos de Judá e o exílio."
       },
-      "categoria": "Profetas Maiores"
+      "categoria": "Profetas Maiores: Pré-exílicos"
     },
     {
       "nome": "Lamentações",
@@ -272,7 +272,7 @@
         "fim": -586,
         "descricao": "Lamentos sobre a destruição de Jerusalém."
       },
-      "categoria": "Profetas Maiores"
+      "categoria": "Profetas Maiores: Pré-exílicos"
     },
     {
       "nome": "Ezequiel",
@@ -283,7 +283,7 @@
         "fim": -571,
         "descricao": "Profecias de Ezequiel durante o exílio na Babilónia."
       },
-      "categoria": "Profetas Maiores"
+      "categoria": "Profetas Maiores: Exílicos"
     },
     {
       "nome": "Daniel",
@@ -291,10 +291,10 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -605,
-        "fim": -530,
+        "fim": -535,
         "descricao": "Histórias e visões de Daniel na Babilónia e na Pérsia."
       },
-      "categoria": "Profetas Maiores"
+      "categoria": "Profetas Maiores: Exílicos"
     },
     {
       "nome": "Oseias",
@@ -302,10 +302,10 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -755,
-        "fim": -715,
+        "fim": -710,
         "descricao": "Profecias sobre a infidelidade de Israel e o amor de Deus."
       },
-      "categoria": "Profetas Menores"
+      "categoria": "Profetas Menores: Pré-exílicos"
     },
     {
       "nome": "Joel",
@@ -313,10 +313,10 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -835,
-        "fim": -796,
+        "fim": -795,
         "descricao": "Profecias sobre o Dia do Senhor e o derramamento do Espírito."
       },
-      "categoria": "Profetas Menores"
+      "categoria": "Profetas Menores: Pré-exílicos"
     },
     {
       "nome": "Amós",
@@ -324,43 +324,43 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -760,
-        "fim": -750,
+        "fim": -753,
         "descricao": "Profecias de justiça social contra Israel."
       },
-      "categoria": "Profetas Menores"
+      "categoria": "Profetas Menores: Pré-exílicos"
     },
     {
       "nome": "Obadias",
       "abreviacao": "Ob",
       "testamento": "Antigo",
       "periodo": {
-        "inicio": -848,
-        "fim": -841,
+        "inicio": -840,
+        "fim": -840,
         "descricao": "Profecia contra Edom."
       },
-      "categoria": "Profetas Menores"
+      "categoria": "Profetas Menores: Pré-exílicos"
     },
     {
       "nome": "Jonas",
       "abreviacao": "Jn",
       "testamento": "Antigo",
       "periodo": {
-        "inicio": -790,
-        "fim": -760,
+        "inicio": -782,
+        "fim": -753,
         "descricao": "Jonas é enviado para pregar a Nínive."
       },
-      "categoria": "Profetas Menores"
+      "categoria": "Profetas Menores: Pré-exílicos"
     },
     {
       "nome": "Miqueias",
       "abreviacao": "Mq",
       "testamento": "Antigo",
       "periodo": {
-        "inicio": -750,
-        "fim": -686,
+        "inicio": -735,
+        "fim": -700,
         "descricao": "Profecias sobre julgamento e esperança para Judá e Israel."
       },
-      "categoria": "Profetas Menores"
+      "categoria": "Profetas Menores: Pré-exílicos"
     },
     {
       "nome": "Naum",
@@ -371,29 +371,29 @@
         "fim": -612,
         "descricao": "Profecia sobre a queda de Nínive."
       },
-      "categoria": "Profetas Menores"
+      "categoria": "Profetas Menores: Pré-exílicos"
     },
     {
       "nome": "Habacuque",
       "abreviacao": "Hc",
       "testamento": "Antigo",
       "periodo": {
-        "inicio": -612,
+        "inicio": -607,
         "fim": -605,
         "descricao": "Diálogo entre Habacuque e Deus sobre a justiça e o sofrimento."
       },
-      "categoria": "Profetas Menores"
+      "categoria": "Profetas Menores: Pré-exílicos"
     },
     {
       "nome": "Sofonias",
       "abreviacao": "Sf",
       "testamento": "Antigo",
       "periodo": {
-        "inicio": -640,
-        "fim": -621,
+        "inicio": -625,
+        "fim": -609,
         "descricao": "Profecias sobre o Dia do Senhor e a restauração de Judá."
       },
-      "categoria": "Profetas Menores"
+      "categoria": "Profetas Menores: Pré-exílicos"
     },
     {
       "nome": "Ageu",
@@ -401,10 +401,10 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -520,
-        "fim": -520,
+        "fim": -515,
         "descricao": "Exortações para reconstruir o templo."
       },
-      "categoria": "Profetas Menores"
+      "categoria": "Profetas Menores: Pós-exílicos"
     },
     {
       "nome": "Zacarias",
@@ -412,20 +412,20 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -520,
-        "fim": -480,
+        "fim": -470,
         "descricao": "Visões e profecias sobre a restauração de Jerusalém."
       },
-      "categoria": "Profetas Menores"
+      "categoria": "Profetas Menores: Pós-exílicos"
     },
     {
       "nome": "Malaquias",
       "abreviacao": "Ml",
       "testamento": "Antigo",
       "periodo": {
-        "inicio": -440,
+        "inicio": -430,
         "fim": -400,
         "descricao": "Chamado ao arrependimento e promessas de bênção."
       },
-      "categoria": "Profetas Menores"
+      "categoria": "Profetas Menores: Pós-exílicos"
     }
   ]
