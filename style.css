@@ -1,71 +1,189 @@
-/* Estilos gerais e para mobile-first */
+/* --- GOOGLE FONTS (Exemplo - Opcional) --- */
+/* Adicione no <head> do seu index.html:
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+*/
+
+/* --- ESTILOS GERAIS --- */
 body {
-    font-family: sans-serif; /* Escolha uma fonte legível. Considere usar Google Fonts */
+    /* font-family: 'Open Sans', sans-serif; /* <- Descomente se usar Google Fonts */
+    font-family: sans-serif; /* Fonte fallback */
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: #f8f9fa; /* Fundo geral suave */
+    color: #343a40;
+    line-height: 1.5;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
+    background-color: #343a40; /* Cor escura para cabeçalho */
+    color: #ffffff;
+    padding: 15px 10px;
     text-align: center;
+    border-bottom: 3px solid #adb5bd;
+}
+
+h1 {
+    margin: 0;
+    font-weight: 700; /* Aplicável se usar Open Sans */
 }
 
 main {
-    padding: 10px;
+    padding: 15px;
 }
 
-/* Estilos da linha do tempo (Vis.js).  IMPORTANTE: Aplicar a .vis-timeline */
-#timeline, .vis-timeline { /* Aplica a ambos */
-    width: 90%;
-    margin: 20px auto;
-    border: 1px solid #ccc;
-    font-family: sans-serif;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    height: 400px; /* Altura inicial. Ajuste conforme necessário. */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px;
+    font-size: 0.9em;
+    color: #6c757d;
 }
 
-/* Estilos para os itens (livros e eventos) */
+/* --- ESTILOS DA LINHA DO TEMPO (VIS.JS) --- */
+#timeline, .vis-timeline {
+    width: 95%;
+    max-width: 1200px;
+    margin: 30px auto;
+    border: 1px solid #dee2e6; /* Borda suave */
+    font-family: inherit;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 500px; /* Altura inicial - ajuste se necessário */
+    background-color: #ffffff; /* Fundo branco para a timeline */
+}
+
+/* Estilos para os itens (livros - cartões) */
 .vis-item {
-    border-radius: 5px;
-    border-width: 2px; /* Reduzido um pouco */
-    padding: 5px;
-    font-size: 12px;
-    cursor: pointer; /* Adicionado: muda o cursor para uma mãozinha */
+    border-radius: 4px;
+    border-width: 1px; /* Borda fina, a cor virá da categoria */
+    padding: 6px 8px; /* Padding ajustado */
+    font-size: 11px;
+    cursor: pointer;
+    margin-bottom: 4px; /* Espaço vertical entre itens empilhados */
+    text-align: left; /* Alinhar texto à esquerda */
+    transition: all 0.2s ease-in-out;
+    line-height: 1.3; /* Ajustar espaçamento linha interna */
 }
 
-/* Cores por categoria */
-.vis-item.pentateuco { background-color: #f0e68c; border-color: #b8b064; }
-.vis-item.historicos { background-color: #add8e6; border-color: #7fb4c6; }
-.vis-item.poeticos { background-color: #98fb98; border-color: #68bb68; }
-.vis-item.profetas-maiores { background-color: #ffb6c1; border-color: #c98691; }
-.vis-item.profetas-menores { background-color: #e0ffff; border-color: #a9d9d9; }
-.vis-item.evento { background-color: #D3D3D3; border-color: #909090; }
-
-
-/* Estilos para os rótulos da escala de tempo */
-.vis-time-axis .vis-text {
-    font-size: 14px;
-    font-weight: bold;
-    color: #555;
+/* Efeito Hover nos Itens */
+.vis-item:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transform: translateY(-1px);
 }
 
-/* Estilo para os pontos (eventos) */
+/* Estilo para as datas dentro dos itens */
+.vis-item small {
+    font-size: 0.9em; /* Datas ligeiramente menores que o nome */
+    opacity: 0.8; /* Menos destaque */
+    display: block;
+    margin-top: 2px;
+    color: inherit; /* Herda a cor do texto definida na categoria */
+}
+
+/* --- CORES POR CATEGORIA E SUBCATEGORIA --- */
+/* IMPORTANTE: Verifique se os nomes das classes abaixo correspondem
+   exatamente às suas categorias/subcategorias no livros.json
+   (tudo em minúsculas, espaços e ':' substituídos por '-') */
+
+/* Pentateuco (Laranja/Amarelo Terra) */
+.vis-item.pentateuco { /* JSON: "Pentateuco" */
+    background-color: #C43302; /* Laranja */
+    border-color: #222;     /* Laranja Escuro */
+    color: #ffffff;            /* Texto Branco */
+}
+
+/* Históricos (Azuis) */
+.vis-item.historicos-pré-exílicos { /* JSON: "Históricos: Pré-exílicos" -> CSS: historicos-pré-exílicos */
+    background-color: #050BB3; /* Azul Médio */
+    border-color: #222;     /* Azul Escuro */
+    color: #ffffff;            /* Texto Branco */
+}
+.vis-item.historicos-pós-exilico { /* JSON: "Históricos: Pós-exilico" -> CSS: historicos-pós-exilico */
+    background-color: #03065D; /* Azul um Tom Mais Claro */
+    border-color: #222;     /* Azul Médio */
+    color: #ffffff;            /* Texto Branco */
+}
+
+/* Poéticos (Verde Água/Turquesa) */
+.vis-item.poéticos { /* JSON: "Poéticos" */
+    background-color: #EDAA25; /* Turquesa */
+    border-color: #222;     /* Turquesa Escuro */
+    color: #ffffff;            /* Texto Branco */
+}
+
+/* Profetas Maiores (Roxo/Púrpura) */
+.vis-item.profetas-maiores-pré-exílicos { /* JSON: "Profetas Maiores: Pré-exílicos" -> CSS: profetas-maiores-pré-exílicos */
+    background-color: #D9042B; /* Roxo Médio */
+    border-color: #222;     /* Roxo Escuro */
+    color: #ffffff;            /* Texto Branco */
+}
+.vis-item.profetas-maiores-exilicos { /* JSON: "Profetas Maiores: Exilicos" -> CSS: profetas-maiores-exilicos */
+    background-color: #0FABAB; /* Roxo Claro */
+    border-color: #222;     /* Roxo Médio */
+    color: #222;            /* Texto Branco */
+}
+
+/* Profetas Menores (Verdes) */
+.vis-item.profetas-menores-pré-exílicos { /* JSON: "Profetas Menores: Pré-exílicos" -> CSS: profetas-menores-pré-exílicos */
+    background-color: #27AE60; /* Verde Médio */
+    border-color: #1E8449;     /* Verde Escuro */
+    color: #ffffff;            /* Texto Branco */
+}
+.vis-item.profetas-menores-pós-exílicos { /* JSON: "Profetas Menores: Pós-exílicos" -> CSS: profetas-menores-pós-exílicos */
+    background-color: #58D68D; /* Verde Claro */
+    border-color: #27AE60;     /* Verde Médio */
+    color: #212529;            /* Texto Escuro (para contraste com verde claro) */
+}
+
+/* Estilo para os pontos no tempo (caso use type: 'point') */
 .vis-item.vis-point {
-    border-width: 3px; /* Reduzido */
+    border-width: 3px;
+    border-radius: 50%; /* Torna os pontos redondos */
+    padding: 5px; /* Ajusta o padding para pontos */
+}
+.vis-item.vis-point .vis-item-content {
+     text-align: center; /* Centraliza texto dentro do ponto, se houver */
 }
 
-/* Estilo para quando o item está selecionado */
+
+/* Item selecionado */
 .vis-item.vis-selected {
-    background-color: #333;
-    border-color: #222;
+    background-color: #495057; /* Cinza escuro quando selecionado */
+    border-color: #343a40;
     color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
+}
+.vis-item.vis-selected small {
+    color: inherit; /* Garante que a data também fica branca/visível */
+    opacity: 0.9;
 }
 
-/* Estilos para os tooltips (opcional) */
+/* --- ESTILOS DA ESCALA DE TEMPO --- */
+.vis-time-axis {
+    background-color: #e9ecef;
+    border-bottom: 1px solid #ced4da;
+}
+/* Texto da escala */
+.vis-time-axis .vis-text {
+    color: #495057;
+    font-size: 12px; /* Tamanho base para rótulos */
+}
+/* Rótulos Maiores (ex: séculos) */
+.vis-time-axis .vis-text.vis-major {
+    font-weight: bold;
+    font-size: 13px; /* Maiores um pouco mais destacados */
+}
+/* Rótulos Menores (ex: anos) */
+.vis-time-axis .vis-text.vis-minor {
+    font-weight: normal;
+    color: #6c757d;
+}
+.vis-grid.vis-minor { border-color: #e9ecef; }
+.vis-grid.vis-major { border-color: #dee2e6; } /* Linhas maiores mais visíveis */
+
+
+/* --- TOOLTIPS --- */
 .vis-tooltip {
     background-color: #fff;
     border: 1px solid #ccc;
@@ -73,63 +191,96 @@ main {
     border-radius: 5px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     font-size: 12px;
-    /* Adicione outros estilos, se desejar */
+    max-width: 300px;
+    font-family: sans-serif; /* Ou a fonte que escolher */
+    color: #333;
+    z-index: 10; /* Garante que fica sobre outros elementos */
 }
 
-  /* The Modal (background) */
-  .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+/* --- MODAL --- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000; /* Acima da timeline */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
 }
-
-/* Modal Content/Box */
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    margin: 10% auto;
+    padding: 25px;
+    border: 1px solid #dee2e6;
+    width: 70%;
+    max-width: 600px;
     border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    position: relative;
 }
-
-/* The Close Button */
+.modal-content h2 {
+    margin-top: 0;
+    color: #343a40;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    font-size: 1.5em; /* Tamanho título modal */
+}
+.modal-content p {
+    line-height: 1.6;
+    color: #495057;
+    font-size: 1em; /* Tamanho texto modal */
+}
 .close {
     color: #aaa;
-    float: right;
+    position: absolute;
+    top: 10px;
+    right: 15px;
     font-size: 28px;
     font-weight: bold;
+    line-height: 1; /* Alinhar melhor o 'x' */
 }
-
 .close:hover,
 .close:focus {
-    color: black;
+    color: #333;
     text-decoration: none;
     cursor: pointer;
 }
 
-/* Ajustes para mobile */
+/* --- AJUSTES PARA MOBILE --- */
 @media (max-width: 767px) {
-    .vis-item {
-        font-size: 10px;
+    h1 {
+        font-size: 1.4em;
     }
-    .vis-time-axis .vis-text {
-        font-size: 12px;
-    }
-    /* IMPORTANTE: Aplicar também a .vis-timeline */
     #timeline, .vis-timeline {
-        height: 300px;  /* Reduz a altura em telas pequenas */
+        width: 98%;
+        height: 450px; /* Altura ajustada para mobile - pode precisar de mais ou menos */
+        margin: 15px auto;
+    }
+    .vis-item {
+        font-size: 9px;
+        padding: 4px 6px;
+    }
+    .vis-item small {
+        font-size: 0.85em;
+        margin-top: 1px;
+    }
+    .vis-time-axis .vis-text.vis-major {
+        font-size: 11px;
+    }
+    .vis-time-axis .vis-text.vis-minor {
+        font-size: 9px;
     }
     .modal-content {
-        margin: 30% auto;  /* Ajuste a margem superior para telas menores */
-        width: 95%; /* Aumente a largura */
+        width: 95%;
+        margin: 15% auto; /* Menos margem no topo */
+        padding: 20px;
     }
+     .modal-content h2 {
+        font-size: 1.3em;
+     }
+     .modal-content p {
+        font-size: 0.9em;
+     }
 }

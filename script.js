@@ -85,7 +85,7 @@ async function criarLinhaDoTempo() {
             end: endDate,
             type: (inicio === fim) ? 'point' : 'range',
             title: `${nome} (${formatarAno(inicio)} a ${formatarAno(fim)}): ${descricao}`, // Tooltip melhorado com datas formatadas
-            className: categoria.toLowerCase().replace(/\s+/g, '-')
+            className: categoria.toLowerCase().replace(/[\s:]+/g, '-') // Substitui espaços E dois-pontos por hífens
         };
     }).filter(item => item !== null); // Filtra itens que podem ter tido erro
 
