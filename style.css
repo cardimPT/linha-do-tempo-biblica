@@ -418,7 +418,7 @@ footer {
      /* Ajuste legenda mobile */
      .legenda-cores ul {
            justify-content: flex-start;
-           gap: 8px 15px;
+           gap: 8px 0px;
      }
      .legenda-cores li.legenda-item { /* Aplicar também a mobile */
         width: 45%; /* Tenta colocar 2 colunas em mobile */
