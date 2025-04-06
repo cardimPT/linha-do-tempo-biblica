@@ -95,14 +95,13 @@ footer {
 }
 
 /* --- ESTILOS DA LINHA DO TEMPO (VIS.JS) --- */
-#timeline, .vis-timeline {
+#timeline {
     width: 95%;
-    max-width: 1200px;
-    margin: 30px auto;
+    max-width: 1920px;
+    margin: 0 auto;
     border: 1px solid var(--cor-borda-suave);
     font-family: inherit;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    height: 500px;
     background-color: #ffffff;
 }
 
