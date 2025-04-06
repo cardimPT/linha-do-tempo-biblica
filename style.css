@@ -1,3 +1,56 @@
+/* --- DEFINIÇÃO DAS VARIÁVEIS DE COR (CONTRASTE AJUSTADO) --- */
+:root {
+    /* Pentateuco */
+    --pentateuco-bg: #C43302;    /* Laranja Escuro */
+    --pentateuco-text: #ffffff;   /* Branco */
+    --pentateuco-border: #8B2401;
+
+    /* Históricos */
+    --historicos-pre-bg: #0599b3;    /* Ciano Médio */
+    --historicos-pre-text: #ffffff;   /* Branco */
+    --historicos-pre-border: #036A7D;
+    --historicos-pos-bg: #0054a3;    /* Azul Escuro */
+    --historicos-pos-text: #ffffff;   /* Branco */
+    --historicos-pos-border: #003A70;
+
+    /* Poéticos */
+    --poeticos-bg: #EDAA25;    /* Amarelo/Dourado */
+    --poeticos-text: #333333;   /* <<< TEXTO ESCURO PARA CONTRASTE >>> */
+    --poeticos-border: #C68E17;
+
+    /* Profetas Maiores (Roxo/Púrpura - Tons Próximos MAIS ESCUROS) */
+    --prof-maiores-pre-bg: #6A1B9A;  /* Roxo Mais Escuro */
+    --prof-maiores-pre-text: #ffffff;
+    --prof-maiores-pre-border: #4A148C; /* Roxo Muito Escuro (Borda) */
+    --prof-maiores-exil-bg: #8E44AD;  /* Roxo Médio (era o 'pre' anterior) */
+    --prof-maiores-exil-text: #ffffff;
+    --prof-maiores-exil-border: #7D3C98; /* Roxo Escuro (Borda) */
+
+    /* Profetas Menores */
+    --prof-menores-pre-bg: #27AE60;    /* Verde Médio */
+    --prof-menores-pre-text: #ffffff;   /* Branco */
+    --prof-menores-pre-border: #1E8449;
+    --prof-menores-pos-bg: #58D68D;    /* Verde Claro */
+    --prof-menores-pos-text: #212529;   /* Texto Escuro */
+    --prof-menores-pos-border: #27AE60;
+
+    /* Cor para item selecionado */
+    --selected-bg: #495057;
+    --selected-border: #343a40;
+    --selected-text: #ffffff;
+
+    /* Cores base */
+    --cor-fundo: #f8f9fa;
+    --cor-texto: #343a40;
+    --cor-header-bg: #343a40;
+    --cor-header-text: #ffffff;
+    --cor-borda-suave: #dee2e6;
+    --cor-texto-secundario: #6c757d;
+    --cor-fundo-eixo: #e9ecef;
+    --cor-borda-eixo: #ced4da;
+    --cor-texto-eixo: #495057;
+}
+
 /* --- GOOGLE FONTS (Exemplo - Opcional) --- */
 /* Adicione no <head> do seu index.html:
    <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,17 +64,17 @@ body {
     font-family: sans-serif; /* Fonte fallback */
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa; /* Fundo geral suave */
-    color: #343a40;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
     line-height: 1.5;
 }
 
 header {
-    background-color: #343a40; /* Cor escura para cabeçalho */
-    color: #ffffff;
+    background-color: var(--cor-header-bg);
+    color: var(--cor-header-text);
     padding: 15px 10px;
     text-align: center;
-    border-bottom: 3px solid #adb5bd;
+    border-bottom: 3px solid var(--cor-borda-suave); /* Usei borda suave aqui */
 }
 
 h1 {
@@ -38,7 +91,7 @@ footer {
     margin-top: 30px;
     padding: 15px;
     font-size: 0.9em;
-    color: #6c757d;
+    color: var(--cor-texto-secundario);
 }
 
 /* --- ESTILOS DA LINHA DO TEMPO (VIS.JS) --- */
@@ -46,24 +99,24 @@ footer {
     width: 95%;
     max-width: 1200px;
     margin: 30px auto;
-    border: 1px solid #dee2e6; /* Borda suave */
+    border: 1px solid var(--cor-borda-suave);
     font-family: inherit;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     height: 500px; /* Altura inicial - ajuste se necessário */
-    background-color: #ffffff; /* Fundo branco para a timeline */
+    background-color: #ffffff;
 }
 
 /* Estilos para os itens (livros - cartões) */
 .vis-item {
     border-radius: 4px;
-    border-width: 1px; /* Borda fina, a cor virá da categoria */
-    padding: 6px 8px; /* Padding ajustado */
+    border-width: 1px;
+    padding: 6px 8px;
     font-size: 11px;
     cursor: pointer;
-    margin-bottom: 4px; /* Espaço vertical entre itens empilhados */
-    text-align: left; /* Alinhar texto à esquerda */
+    margin-bottom: 4px;
+    text-align: left;
     transition: all 0.2s ease-in-out;
-    line-height: 1.3; /* Ajustar espaçamento linha interna */
+    line-height: 1.3;
 }
 
 /* Efeito Hover nos Itens */
@@ -74,113 +127,98 @@ footer {
 
 /* Estilo para as datas dentro dos itens */
 .vis-item small {
-    font-size: 0.9em; /* Datas ligeiramente menores que o nome */
-    opacity: 0.8; /* Menos destaque */
+    font-size: 0.9em;
+    opacity: 0.8;
     display: block;
     margin-top: 2px;
-    color: inherit; /* Herda a cor do texto definida na categoria */
+    color: inherit;
 }
 
-/* --- CORES POR CATEGORIA E SUBCATEGORIA --- */
-/* IMPORTANTE: Verifique se os nomes das classes abaixo correspondem
-   exatamente às suas categorias/subcategorias no livros.json
-   (tudo em minúsculas, espaços e ':' substituídos por '-') */
+/* --- CORES POR CATEGORIA E SUBCATEGORIA (Usando Variáveis) --- */
+/* IMPORTANTE: Verifique se os nomes das classes CSS correspondem ao seu livros.json */
 
-/* Pentateuco (Laranja/Amarelo Terra) */
-.vis-item.pentateuco { /* JSON: "Pentateuco" */
-    background-color: #C43302; /* Laranja */
-    border-color: #222;     /* Laranja Escuro */
-    color: #ffffff;            /* Texto Branco */
+.vis-item.pentateuco {
+    background-color: var(--pentateuco-bg);
+    border-color: var(--pentateuco-border);
+    color: var(--pentateuco-text);
 }
-
-/* Históricos (Azuis) */
-.vis-item.historicos-pré-exílicos { /* JSON: "Históricos: Pré-exílicos" -> CSS: historicos-pré-exílicos */
-    background-color: #050BB3; /* Azul Médio */
-    border-color: #222;     /* Azul Escuro */
-    color: #ffffff;            /* Texto Branco */
+.vis-item.históricos-pré-exílicos {
+    background-color: var(--historicos-pre-bg);
+    border-color: var(--historicos-pre-border);
+    color: var(--historicos-pre-text);
 }
-.vis-item.historicos-pós-exilico { /* JSON: "Históricos: Pós-exilico" -> CSS: historicos-pós-exilico */
-    background-color: #03065D; /* Azul um Tom Mais Claro */
-    border-color: #222;     /* Azul Médio */
-    color: #ffffff;            /* Texto Branco */
+.vis-item.históricos-pós-exílico {
+    background-color: var(--historicos-pos-bg);
+    border-color: var(--historicos-pos-border);
+    color: var(--historicos-pos-text);
 }
-
-/* Poéticos (Verde Água/Turquesa) */
-.vis-item.poéticos { /* JSON: "Poéticos" */
-    background-color: #EDAA25; /* Turquesa */
-    border-color: #222;     /* Turquesa Escuro */
-    color: #ffffff;            /* Texto Branco */
+.vis-item.poéticos {
+    background-color: var(--poeticos-bg);
+    border-color: var(--poeticos-border);
+    color: var(--poeticos-text);
 }
-
-/* Profetas Maiores (Roxo/Púrpura) */
-.vis-item.profetas-maiores-pré-exílicos { /* JSON: "Profetas Maiores: Pré-exílicos" -> CSS: profetas-maiores-pré-exílicos */
-    background-color: #D9042B; /* Roxo Médio */
-    border-color: #222;     /* Roxo Escuro */
-    color: #ffffff;            /* Texto Branco */
+.vis-item.profetas-maiores-pré-exílicos {
+    background-color: var(--prof-maiores-pre-bg);
+    border-color: var(--prof-maiores-pre-border);
+    color: var(--prof-maiores-pre-text);
 }
-.vis-item.profetas-maiores-exilicos { /* JSON: "Profetas Maiores: Exilicos" -> CSS: profetas-maiores-exilicos */
-    background-color: #0FABAB; /* Roxo Claro */
-    border-color: #222;     /* Roxo Médio */
-    color: #222;            /* Texto Branco */
+.vis-item.profetas-maiores-exílicos {
+    background-color: var(--prof-maiores-exil-bg);
+    border-color: var(--prof-maiores-exil-border);
+    color: var(--prof-maiores-exil-text);
 }
-
-/* Profetas Menores (Verdes) */
-.vis-item.profetas-menores-pré-exílicos { /* JSON: "Profetas Menores: Pré-exílicos" -> CSS: profetas-menores-pré-exílicos */
-    background-color: #27AE60; /* Verde Médio */
-    border-color: #1E8449;     /* Verde Escuro */
-    color: #ffffff;            /* Texto Branco */
+.vis-item.profetas-menores-pré-exílicos {
+    background-color: var(--prof-menores-pre-bg);
+    border-color: var(--prof-menores-pre-border);
+    color: var(--prof-menores-pre-text);
 }
-.vis-item.profetas-menores-pós-exílicos { /* JSON: "Profetas Menores: Pós-exílicos" -> CSS: profetas-menores-pós-exílicos */
-    background-color: #58D68D; /* Verde Claro */
-    border-color: #27AE60;     /* Verde Médio */
-    color: #212529;            /* Texto Escuro (para contraste com verde claro) */
+.vis-item.profetas-menores-pós-exílicos {
+    background-color: var(--prof-menores-pos-bg);
+    border-color: var(--prof-menores-pos-border);
+    color: var(--prof-menores-pos-text);
 }
 
-/* Estilo para os pontos no tempo (caso use type: 'point') */
+/* Estilo para os pontos no tempo */
 .vis-item.vis-point {
     border-width: 3px;
-    border-radius: 50%; /* Torna os pontos redondos */
-    padding: 5px; /* Ajusta o padding para pontos */
+    border-radius: 50%;
+    padding: 5px;
 }
 .vis-item.vis-point .vis-item-content {
-     text-align: center; /* Centraliza texto dentro do ponto, se houver */
+     text-align: center;
 }
-
 
 /* Item selecionado */
 .vis-item.vis-selected {
-    background-color: #495057; /* Cinza escuro quando selecionado */
-    border-color: #343a40;
-    color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
+    background-color: var(--selected-bg);
+    border-color: var(--selected-border);
+    color: var(--selected-text);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 .vis-item.vis-selected small {
-    color: inherit; /* Garante que a data também fica branca/visível */
+    color: inherit;
     opacity: 0.9;
 }
 
 /* --- ESTILOS DA ESCALA DE TEMPO --- */
 .vis-time-axis {
-    background-color: #e9ecef;
-    border-bottom: 1px solid #ced4da;
+    background-color: var(--cor-fundo-eixo);
+    border-bottom: 1px solid var(--cor-borda-eixo);
 }
-/* Texto da escala */
 .vis-time-axis .vis-text {
-    color: #495057;
-    font-size: 12px; /* Tamanho base para rótulos */
+    color: var(--cor-texto-eixo);
+    font-size: 12px;
 }
-/* Rótulos Maiores (ex: séculos) */
 .vis-time-axis .vis-text.vis-major {
     font-weight: bold;
-    font-size: 13px; /* Maiores um pouco mais destacados */
+    font-size: 13px;
 }
-/* Rótulos Menores (ex: anos) */
 .vis-time-axis .vis-text.vis-minor {
     font-weight: normal;
-    color: #6c757d;
+    color: var(--cor-texto-secundario); /* Usei cor secundaria aqui */
 }
-.vis-grid.vis-minor { border-color: #e9ecef; }
-.vis-grid.vis-major { border-color: #dee2e6; } /* Linhas maiores mais visíveis */
+.vis-grid.vis-minor { border-color: var(--cor-fundo-eixo); } /* Linha menor igual ao fundo */
+.vis-grid.vis-major { border-color: var(--cor-borda-suave); }
 
 
 /* --- TOOLTIPS --- */
@@ -192,16 +230,16 @@ footer {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     font-size: 12px;
     max-width: 300px;
-    font-family: sans-serif; /* Ou a fonte que escolher */
+    font-family: sans-serif;
     color: #333;
-    z-index: 10; /* Garante que fica sobre outros elementos */
+    z-index: 10;
 }
 
 /* --- MODAL --- */
 .modal {
     display: none;
     position: fixed;
-    z-index: 1000; /* Acima da timeline */
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
@@ -213,7 +251,7 @@ footer {
     background-color: #fefefe;
     margin: 10% auto;
     padding: 25px;
-    border: 1px solid #dee2e6;
+    border: 1px solid var(--cor-borda-suave);
     width: 70%;
     max-width: 600px;
     border-radius: 5px;
@@ -222,15 +260,15 @@ footer {
 }
 .modal-content h2 {
     margin-top: 0;
-    color: #343a40;
+    color: var(--cor-texto);
     border-bottom: 1px solid #eee;
     padding-bottom: 10px;
-    font-size: 1.5em; /* Tamanho título modal */
+    font-size: 1.5em;
 }
 .modal-content p {
     line-height: 1.6;
-    color: #495057;
-    font-size: 1em; /* Tamanho texto modal */
+    color: var(--cor-texto-eixo); /* Usei cor do eixo aqui */
+    font-size: 1em;
 }
 .close {
     color: #aaa;
@@ -239,13 +277,87 @@ footer {
     right: 15px;
     font-size: 28px;
     font-weight: bold;
-    line-height: 1; /* Alinhar melhor o 'x' */
+    line-height: 1;
 }
 .close:hover,
 .close:focus {
     color: #333;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* --- LEGENDA DE CORES --- */
+.legenda-cores {
+    width: 90%;
+    max-width: 1100px;
+    margin: 15px auto 25px auto;
+    padding: 15px;
+    background-color: #f1f3f5;
+    border: 1px solid var(--cor-borda-suave);
+    border-radius: 5px;
+    font-size: 0.9em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.legenda-cores h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    text-align: center;
+    color: var(--cor-texto);
+    font-weight: bold;
+}
+
+.legenda-cores ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 20px;
+}
+
+.legenda-cores li {
+    display: flex;
+    align-items: center;
+}
+
+.cor-legenda {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+/* Cores da Legenda (Usando Variáveis) */
+.cor-legenda.pentateuco { background-color: var(--pentateuco-bg); }
+.cor-legenda.historicos-pré-exílicos { background-color: var(--historicos-pre-bg); }
+.cor-legenda.historicos-pós-exilico { background-color: var(--historicos-pos-bg); }
+.cor-legenda.poéticos { background-color: var(--poeticos-bg); }
+.cor-legenda.profetas-maiores-pré-exílicos { background-color: var(--prof-maiores-pre-bg); }
+.cor-legenda.profetas-maiores-exilicos { background-color: var(--prof-maiores-exil-bg); }
+.cor-legenda.profetas-menores-pré-exílicos { background-color: var(--prof-menores-pre-bg); }
+.cor-legenda.profetas-menores-pós-exílicos { background-color: var(--prof-menores-pos-bg); }
+/* Adicione mais cores se tiver mais categorias */
+
+/* Cor mais escura para DATAS em itens PONTUAIS (duração zero) */
+.vis-item.vis-point small {
+    color: #333333 !important; /* Texto cinza escuro (ou use 'black') */
+    opacity: 1 !important;     /* Garante opacidade total para a data */
+}
+/* Cor mais escura para texto (nome E data) em itens PONTUAIS */
+.vis-item.vis-point {
+    color: #333333 !important; /* Texto cinza escuro para TODO o item pontual */
+}
+
+/* Garante opacidade total para DATAS em itens PONTUAIS (sobrescreve opacidade geral de small) */
+.vis-item.vis-point small {
+    /* A cor já é herdada da regra acima, não precisa de 'color' aqui */
+    opacity: 1 !important;
 }
 
 /* --- AJUSTES PARA MOBILE --- */
@@ -255,7 +367,7 @@ footer {
     }
     #timeline, .vis-timeline {
         width: 98%;
-        height: 450px; /* Altura ajustada para mobile - pode precisar de mais ou menos */
+        height: 450px; /* Altura ajustada para mobile */
         margin: 15px auto;
     }
     .vis-item {
@@ -274,7 +386,7 @@ footer {
     }
     .modal-content {
         width: 95%;
-        margin: 15% auto; /* Menos margem no topo */
+        margin: 15% auto;
         padding: 20px;
     }
      .modal-content h2 {
@@ -282,5 +394,14 @@ footer {
      }
      .modal-content p {
         font-size: 0.9em;
+     }
+     /* Ajuste legenda mobile */
+     .legenda-cores ul {
+           justify-content: flex-start;
+           gap: 8px 15px;
+     }
+     .legenda-cores li {
+         width: 45%; /* Tenta colocar 2 colunas em mobile */
+         margin-bottom: 5px;
      }
 }
