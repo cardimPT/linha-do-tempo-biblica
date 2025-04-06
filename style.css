@@ -295,6 +295,26 @@ footer {
     cursor: pointer;
 }
 
+/* --- Estilos Adicionais para Conteúdo do Modal --- */
+.modal-content p.modal-info { /* Estilo para os parágrafos de info */
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    color: #555;
+    border-top: 1px solid #eee; /* Linha separadora opcional */
+    padding-top: 10px;        /* Espaço acima opcional */
+}
+
+.modal-content p.modal-info strong { /* Estilo para os rótulos "Período:", "Categoria:" */
+    margin-right: 5px;
+    color: #333; /* Rótulo um pouco mais escuro */
+}
+
+/* Estilos opcionais para os spans com os dados */
+#modal-period, #modal-category {
+    /* font-style: italic; */ /* Exemplo: Itálico */
+}
+
 /* --- ESTILOS DA LEGENDA DE CORES --- */
 .legenda-cores {
     width: 90%;
@@ -378,7 +398,6 @@ footer {
 .cor-legenda.profetas-menores-pré-exílicos { background-color: var(--prof-menores-pre-bg); }
 .cor-legenda.profetas-menores-pós-exílicos { background-color: var(--prof-menores-pos-bg); }
 /* Adicione mais cores se tiver mais categorias */
-
 
 /* --- AJUSTES PARA MOBILE --- */
 @media (max-width: 767px) {

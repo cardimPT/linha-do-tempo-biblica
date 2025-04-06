@@ -5,9 +5,9 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -4000,
-        "fim": -1804,
-        "descricao": "A Criação e a Aliança de Deus"
+        "fim": -1804
       },
+      "descricao": "A Criação e a Aliança de Deus",
       "categoria": "Pentateuco"
     },
     {
@@ -16,9 +16,9 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -1876,
-        "fim": -1446,
-        "descricao": "A Redenção e a Revelação de Deus"
+        "fim": -1446
       },
+      "descricao": "A Redenção e a Revelação de Deus",
       "categoria": "Pentateuco"
     },
     {
@@ -27,9 +27,9 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -1446,
-        "fim": -1445,
-        "descricao": "O código de santidade do Deus Santo"
+        "fim": -1445
       },
+      "descricao": "O código de santidade do Deus Santo",
       "categoria": "Pentateuco"
     },
     {
@@ -38,9 +38,9 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -1446,
-        "fim": -1406,
-        "descricao": "O fracasso de fé de Israel"
+        "fim": -1406
       },
+      "descricao": "O fracasso de fé de Israel",
       "categoria": "Pentateuco"
     },
     {
@@ -49,9 +49,9 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -1406,
-        "fim": -1406,
-        "descricao": "Discursos finais de Moisés antes da entrada em Canaã."
+        "fim": -1406
       },
+      "descricao": "Discursos finais de Moisés antes da entrada em Canaã.",
       "categoria": "Pentateuco"
     },
     {
@@ -60,9 +60,9 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -1406,
-        "fim": -1350,
-        "descricao": "Possuindo a Terra Prometida"
+        "fim": -1350
       },
+      "descricao": "Possuindo a Terra Prometida",
       "categoria": "Históricos: Pré-exílicos"
     },
     {
@@ -71,9 +71,9 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -1380,
-        "fim": -1045,
-        "descricao": "A Idade das Trevas da História de Israel"
+        "fim": -1045
       },
+      "descricao": "A Idade das Trevas da História de Israel",
       "categoria": "Históricos: Pré-exílicos"
     },
     {
@@ -82,9 +82,9 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -1160,
-        "fim": -1100,
-        "descricao": "Vida piedosa numa época de impiedade"
+        "fim": -1100
       },
+      "descricao": "Vida piedosa numa época de impiedade",
       "categoria": "Históricos: Pré-exílicos"
     },
     {
@@ -93,9 +93,9 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -1105,
-        "fim": -1011,
-        "descricao": "Israel rejeita a Deus como Rei"
+        "fim": -1011
       },
+      "descricao": "Israel rejeita a Deus como Rei",
       "categoria": "Históricos: Pré-exílicos"
     },
     {
@@ -104,9 +104,9 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -1011,
-        "fim": -971,
-        "descricao": "Rei Davi, um homem segundo o coração de Deus"
+        "fim": -971
       },
+      "descricao": "Rei Davi, um homem segundo o coração de Deus",
       "categoria": "Históricos: Pré-exílicos"
     },
     {
@@ -115,9 +115,9 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -971,
-        "fim": -840,
-        "descricao": "O coração dividido de Salomão conduz ao reino dividido"
+        "fim": -840
       },
+      "descricao": "O coração dividido de Salomão conduz ao reino dividido",
       "categoria": "Históricos: Pré-exílicos"
     },
     {
@@ -126,9 +126,9 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -853,
-        "fim": -586,
-        "descricao": "A queda de Israel e de Judá"
+        "fim": -586
       },
+      "descricao": "A queda de Israel e de Judá",
       "categoria": "Históricos: Pré-exílicos"
     },
     {
@@ -137,9 +137,9 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -1004,
-        "fim": -971,
-        "descricao": "O reinado glorioso do rei Davi"
+        "fim": -971
       },
+      "descricao": "O reinado glorioso do rei Davi",
       "categoria": "Históricos: Pré-exílicos"
     },
     {
@@ -148,9 +148,9 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -971,
-        "fim": -538,
-        "descricao": "A fortuna de Salomão - a queda de Judá"
+        "fim": -538
       },
+      "descricao": "A fortuna de Salomão - a queda de Judá",
       "categoria": "Históricos: Pré-exílicos"
     },
     {
@@ -159,9 +159,9 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -538,
-        "fim": -456,
-        "descricao": "Judá retornando do Exílio"
+        "fim": -456
       },
+      "descricao": "Judá retornando do Exílio",
       "categoria": "Históricos: Pós-exílicos"
     },
     {
@@ -170,9 +170,9 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -444,
-        "fim": -420,
-        "descricao": "O terceiro retorno visando a reconstrução dos muros"
+        "fim": -420
       },
+      "descricao": "O terceiro retorno visando a reconstrução dos muros",
       "categoria": "Históricos: Pós-exílicos"
     },
     {
@@ -181,9 +181,9 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -479,
-        "fim": -473,
-        "descricao": "Ester, rainha judia na Pérsia, salva seu povo."
+        "fim": -473
       },
+      "descricao": "Ester, rainha judia na Pérsia, salva seu povo.",
       "categoria": "Históricos: Pós-exílicos"
     },
     {
@@ -192,9 +192,9 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -2000,
-        "fim": -1800,
-        "descricao": "Sofrimento de Jó e questões sobre a justiça divina."
+        "fim": -1800
       },
+      "descricao": "Sofrimento de Jó e questões sobre a justiça divina.",
       "categoria": "Poéticos"
     },
     {
@@ -203,9 +203,9 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -1410,
-        "fim": -450,
-        "descricao": "Coleção de cânticos, poemas e orações."
+        "fim": -450
       },
+      "descricao": "Coleção de cânticos, poemas e orações.",
       "categoria": "Poéticos"
     },
     {
@@ -214,9 +214,9 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -970,
-        "fim": -930,
-        "descricao": "Sabedoria prática para a vida diária."
+        "fim": -930
       },
+      "descricao": "Sabedoria prática para a vida diária.",
       "categoria": "Poéticos"
     },
     {
@@ -225,9 +225,9 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -935,
-        "fim": -930,
-        "descricao": "Reflexões sobre o sentido da vida."
+        "fim": -930
       },
+      "descricao": "Reflexões sobre o sentido da vida.",
       "categoria": "Poéticos"
     },
     {
@@ -236,9 +236,9 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -970,
-        "fim": -930,
-        "descricao": "Poema de amor entre um noivo e sua noiva."
+        "fim": -930
       },
+      "descricao": "Poema de amor entre um noivo e sua noiva.",
       "categoria": "Poéticos"
     },
     {
@@ -247,9 +247,9 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -740,
-        "fim": -680,
-        "descricao": "Profecias sobre julgamento e restauração de Judá e Israel."
+        "fim": -680
       },
+      "descricao": "Profecias sobre julgamento e restauração de Judá e Israel.",
       "categoria": "Profetas Maiores: Pré-exílicos"
     },
     {
@@ -258,9 +258,9 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -627,
-        "fim": -586,
-        "descricao": "Profecias de Jeremias durante os últimos anos de Judá e o exílio."
+        "fim": -586
       },
+      "descricao": "Profecias de Jeremias durante os últimos anos de Judá e o exílio.",
       "categoria": "Profetas Maiores: Pré-exílicos"
     },
     {
@@ -269,9 +269,9 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -586,
-        "fim": -586,
-        "descricao": "Lamentos sobre a destruição de Jerusalém."
+        "fim": -586
       },
+      "descricao": "Lamentos sobre a destruição de Jerusalém.",
       "categoria": "Profetas Maiores: Pré-exílicos"
     },
     {
@@ -280,9 +280,9 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -593,
-        "fim": -571,
-        "descricao": "Profecias de Ezequiel durante o exílio na Babilónia."
+        "fim": -571
       },
+      "descricao": "Profecias de Ezequiel durante o exílio na Babilónia.",
       "categoria": "Profetas Maiores: Exílicos"
     },
     {
@@ -291,9 +291,9 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -605,
-        "fim": -535,
-        "descricao": "Histórias e visões de Daniel na Babilónia e na Pérsia."
+        "fim": -535
       },
+      "descricao": "Histórias e visões de Daniel na Babilónia e na Pérsia.",
       "categoria": "Profetas Maiores: Exílicos"
     },
     {
@@ -302,9 +302,9 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -755,
-        "fim": -710,
-        "descricao": "Profecias sobre a infidelidade de Israel e o amor de Deus."
+        "fim": -710
       },
+      "descricao": "Profecias sobre a infidelidade de Israel e o amor de Deus.",
       "categoria": "Profetas Menores: Pré-exílicos"
     },
     {
@@ -313,9 +313,9 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -835,
-        "fim": -795,
-        "descricao": "Profecias sobre o Dia do Senhor e o derramamento do Espírito."
+        "fim": -795
       },
+      "descricao": "Profecias sobre o Dia do Senhor e o derramamento do Espírito.",
       "categoria": "Profetas Menores: Pré-exílicos"
     },
     {
@@ -324,9 +324,9 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -760,
-        "fim": -753,
-        "descricao": "Profecias de justiça social contra Israel."
+        "fim": -753
       },
+      "descricao": "Profecias de justiça social contra Israel.",
       "categoria": "Profetas Menores: Pré-exílicos"
     },
     {
@@ -335,9 +335,9 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -840,
-        "fim": -840,
-        "descricao": "Profecia contra Edom."
+        "fim": -840
       },
+      "descricao": "Profecia contra Edom.",
       "categoria": "Profetas Menores: Pré-exílicos"
     },
     {
@@ -346,9 +346,9 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -782,
-        "fim": -753,
-        "descricao": "Jonas é enviado para pregar a Nínive."
+        "fim": -753
       },
+      "descricao": "Jonas é enviado para pregar a Nínive.",
       "categoria": "Profetas Menores: Pré-exílicos"
     },
     {
@@ -357,9 +357,9 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -735,
-        "fim": -700,
-        "descricao": "Profecias sobre julgamento e esperança para Judá e Israel."
+        "fim": -700
       },
+      "descricao": "Profecias sobre julgamento e esperança para Judá e Israel.",
       "categoria": "Profetas Menores: Pré-exílicos"
     },
     {
@@ -368,9 +368,9 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -663,
-        "fim": -612,
-        "descricao": "Profecia sobre a queda de Nínive."
+        "fim": -612
       },
+      "descricao": "Profecia sobre a queda de Nínive.",
       "categoria": "Profetas Menores: Pré-exílicos"
     },
     {
@@ -379,9 +379,9 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -607,
-        "fim": -605,
-        "descricao": "Diálogo entre Habacuque e Deus sobre a justiça e o sofrimento."
+        "fim": -605
       },
+      "descricao": "Diálogo entre Habacuque e Deus sobre a justiça e o sofrimento.",
       "categoria": "Profetas Menores: Pré-exílicos"
     },
     {
@@ -390,9 +390,9 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -625,
-        "fim": -609,
-        "descricao": "Profecias sobre o Dia do Senhor e a restauração de Judá."
+        "fim": -609
       },
+      "descricao": "Profecias sobre o Dia do Senhor e a restauração de Judá.",
       "categoria": "Profetas Menores: Pré-exílicos"
     },
     {
@@ -401,9 +401,9 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -520,
-        "fim": -515,
-        "descricao": "Exortações para reconstruir o templo."
+        "fim": -515
       },
+      "descricao": "Exortações para reconstruir o templo.",
       "categoria": "Profetas Menores: Pós-exílicos"
     },
     {
@@ -412,9 +412,9 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -520,
-        "fim": -470,
-        "descricao": "Visões e profecias sobre a restauração de Jerusalém."
+        "fim": -470
       },
+      "descricao": "Visões e profecias sobre a restauração de Jerusalém.",
       "categoria": "Profetas Menores: Pós-exílicos"
     },
     {
@@ -423,9 +423,9 @@
       "testamento": "Antigo",
       "periodo": {
         "inicio": -430,
-        "fim": -400,
-        "descricao": "Chamado ao arrependimento e promessas de bênção."
+        "fim": -400
       },
+      "descricao": "Chamado ao arrependimento e promessas de bênção.",
       "categoria": "Profetas Menores: Pós-exílicos"
     }
   ]

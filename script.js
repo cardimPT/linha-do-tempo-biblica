@@ -139,37 +139,84 @@ async function criarLinhaDoTempo() {
     setupLegendFilters();
 }
 
-// Função para configurar o Modal (separada para organização)
+// Função para configurar o Modal (com Período e Categoria)
 function setupModal() {
-     const modal = document.getElementById('myModal');
-     const closeButton = document.getElementsByClassName("close")[0];
-     const modalTitle = document.getElementById('modal-title');
-     const modalDescription = document.getElementById('modal-description');
+    const modal = document.getElementById('myModal');
+    const closeButton = document.getElementsByClassName("close")[0];
+    const modalTitle = document.getElementById('modal-title');
+    const modalDescription = document.getElementById('modal-description');
+    // --- NOVOS ELEMENTOS ---
+    const modalPeriod = document.getElementById('modal-period');
+    const modalCategory = document.getElementById('modal-category');
+    // --- FIM NOVOS ELEMENTOS ---
 
-     if (modal && closeButton && modalTitle && modalDescription) {
-        timeline.on('select', function (properties) {
-            const itemId = properties.items[0];
+    // Função auxiliar para formatar o ano (já deve existir dentro de criarLinhaDoTempo ou globalmente)
+    // Se não estiver acessível aqui, copie-a para cá ou defina-a fora das funções.
+    function formatarAno(ano) {
+        if (ano < 0) { return `${Math.abs(ano)} a.C.`; }
+        else if (ano === 0) { return 'c. 1 d.C.'; }
+        else { return `${ano} d.C.`; }
+    }
+
+    // Verifica se TODOS os elementos do modal existem
+    if (modal && closeButton && modalTitle && modalDescription && modalPeriod && modalCategory) {
+
+        timeline.on('select', function (properties) { // Ou 'click', conforme decidiu
+            const itemId = properties.items[0]; // Ou properties.item para 'click'
             if (itemId) {
-                // Procura nos dados originais
+                // Procura nos dados originais (livrosBiblicos)
                 const livroSelecionado = livrosBiblicos.find(livro =>
                     (typeof livro.abreviacao === 'string' ? livro.abreviacao : 'ID') === itemId
                 );
+
                 if (livroSelecionado) {
+                    // Preenche Título e Descrição Curta (como antes)
                     modalTitle.textContent = typeof livroSelecionado.nome === 'string' ? livroSelecionado.nome : 'Título Indefinido';
                     modalDescription.textContent = typeof livroSelecionado.descricao === 'string' ? livroSelecionado.descricao : 'Sem descrição.';
-                    modal.style.display = "block";
+
+                    // --- PREENCHER PERÍODO ---
+                    const inicio = (livroSelecionado.periodo && typeof livroSelecionado.periodo.inicio === 'number') ? livroSelecionado.periodo.inicio : null;
+                    const fim = (livroSelecionado.periodo && typeof livroSelecionado.periodo.fim === 'number') ? livroSelecionado.periodo.fim : inicio; // Default a inicio se fim faltar
+
+                    if (inicio !== null) {
+                        if (inicio === fim) {
+                            modalPeriod.textContent = formatarAno(inicio); // Ponto no tempo
+                        } else {
+                            modalPeriod.textContent = `${formatarAno(inicio)} - ${formatarAno(fim)}`; // Intervalo
+                        }
+                    } else {
+                        modalPeriod.textContent = 'Indefinido';
+                    }
+
+                    // --- PREENCHER CATEGORIA ---
+                    modalCategory.textContent = typeof livroSelecionado.categoria === 'string' ? livroSelecionado.categoria : 'Indefinida';
+                    // --- FIM NOVAS PARTES ---
+
+                    modal.style.display = "block"; // Mostra o modal
+
                 } else {
                     console.warn("Livro selecionado com ID", itemId, "não encontrado nos dados.");
                 }
-            } else {
-                // Se clicar fora de um item (desselecionar), esconde o modal (opcional)
-                 // modal.style.display = "none";
             }
         });
-        closeButton.onclick = function() { modal.style.display = "none"; }
-        window.onclick = function(event) { if (event.target == modal) { modal.style.display = "none"; } }
+
+        // Função para fechar o modal
+        function closeModal() {
+            modal.style.display = "none";
+        }
+
+        // Listener para o botão 'X'
+        closeButton.onclick = closeModal;
+
+        // Listener para clique fora do conteúdo do modal
+        modal.addEventListener('click', function(event) {
+           if (event.target === modal) {
+              closeModal();
+           }
+        });
+
      } else {
-         console.warn("Elementos do modal não encontrados. A funcionalidade do modal não funcionará.");
+         console.warn("Elementos do modal (ou seus conteúdos) não encontrados. A funcionalidade do modal pode estar incompleta.");
      }
 }
 
