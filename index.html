@@ -6,7 +6,6 @@
     <title>Linha do Tempo Bíblica</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/vis-timeline@latest/styles/vis-timeline-graph2d.min.css" rel="stylesheet" type="text/css" />
-
 </head>
 <body>
     <header>
@@ -15,25 +14,38 @@
 
     <main>
         <div class="legenda-cores">
-            <h3>Legenda das Categorias:</h3>
-            <ul>
-                <li><span class="cor-legenda pentateuco"></span> Pentateuco</li>
-                <li><span class="cor-legenda historicos-pré-exílicos"></span> Históricos: Pré-exílicos</li>
-                <li><span class="cor-legenda historicos-pós-exilico"></span> Históricos: Pós-exílico</li>
-                <li><span class="cor-legenda poéticos"></span> Poéticos</li>
-                <li><span class="cor-legenda profetas-maiores-pré-exílicos"></span> Profetas Maiores: Pré-exílicos</li>
-                <li><span class="cor-legenda profetas-maiores-exilicos"></span> Profetas Maiores: Exílicos</li>
-                <li><span class="cor-legenda profetas-menores-pré-exílicos"></span> Profetas Menores: Pré-exílicos</li>
-                <li><span class="cor-legenda profetas-menores-pós-exílicos"></span> Profetas Menores: Pós-exílicos</li>
+            <h3>Legenda / Filtro:</h3> <ul>
+                <li class="legenda-item active" data-categoria="Pentateuco">
+                    <span class="cor-legenda pentateuco"></span> Pentateuco
+                </li>
+                <li class="legenda-item active" data-categoria="Históricos: Pré-exílicos">
+                    <span class="cor-legenda históricos-pré-exílicos"></span> Históricos: Pré-exílicos
+                </li>
+                <li class="legenda-item active" data-categoria="Históricos: Pós-exílicos">
+                    <span class="cor-legenda históricos-pós-exílicos"></span> Históricos: Pós-exílicos
+                </li>
+                <li class="legenda-item active" data-categoria="Poéticos">
+                    <span class="cor-legenda poéticos"></span> Poéticos
+                </li>
+                <li class="legenda-item active" data-categoria="Profetas Maiores: Pré-exílicos">
+                    <span class="cor-legenda profetas-maiores-pré-exílicos"></span> Profetas Maiores: Pré-exílicos
+                </li>
+                <li class="legenda-item active" data-categoria="Profetas Maiores: Exílicos">
+                    <span class="cor-legenda profetas-maiores-exílicos"></span> Profetas Maiores: Exílicos
+                </li>
+                <li class="legenda-item active" data-categoria="Profetas Menores: Pré-exílicos">
+                    <span class="cor-legenda profetas-menores-pré-exílicos"></span> Profetas Menores: Pré-exílicos
+                </li>
+                <li class="legenda-item active" data-categoria="Profetas Menores: Pós-exílicos">
+                    <span class="cor-legenda profetas-menores-pós-exílicos"></span> Profetas Menores: Pós-exílicos
+                </li>
             </ul>
         </div>
-        <div id="timeline"></div>
-    </main>
+        <div id="timeline"></div> </main>
 
     <footer>
-        <p>&copy; 2025 Ricardo Cardim</p>
-    </footer>
-    
+        <p>&copy; 2025 Ricardo Cardim</p> </footer>
+
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>

@@ -1,30 +1,30 @@
-/* --- DEFINIÇÃO DAS VARIÁVEIS DE COR (CONTRASTE AJUSTADO) --- */
+/* --- DEFINIÇÃO DAS VARIÁVEIS DE COR --- */
 :root {
     /* Pentateuco */
-    --pentateuco-bg: #C43302;    /* Laranja Escuro */
-    --pentateuco-text: #ffffff;   /* Branco */
-    --pentateuco-border: #8B2401;
+    --pentateuco-bg: #C43302;
+    --pentateuco-text: #ffffff;
+    --pentateuco-border: #8B2401; /* Tom mais escuro para borda */
 
     /* Históricos */
-    --historicos-pre-bg: #0599b3;    /* Ciano Médio */
-    --historicos-pre-text: #ffffff;   /* Branco */
+    --historicos-pre-bg: #0599b3;
+    --historicos-pre-text: #ffffff;
     --historicos-pre-border: #036A7D;
-    --historicos-pos-bg: #0054a3;    /* Azul Escuro */
-    --historicos-pos-text: #ffffff;   /* Branco */
+    --historicos-pos-bg: #0054a3;
+    --historicos-pos-text: #ffffff;
     --historicos-pos-border: #003A70;
 
     /* Poéticos */
-    --poeticos-bg: #EDAA25;    /* Amarelo/Dourado */
-    --poeticos-text: #333333;   /* <<< TEXTO ESCURO PARA CONTRASTE >>> */
+    --poeticos-bg: #EDAA25;
+    --poeticos-text: #333333; /* Texto escuro para contraste */
     --poeticos-border: #C68E17;
 
-    /* Profetas Maiores (Roxo/Púrpura - Tons Próximos MAIS ESCUROS) */
+    /* Profetas Maiores */
     --prof-maiores-pre-bg: #6A1B9A;  /* Roxo Mais Escuro */
     --prof-maiores-pre-text: #ffffff;
-    --prof-maiores-pre-border: #4A148C; /* Roxo Muito Escuro (Borda) */
-    --prof-maiores-exil-bg: #8E44AD;  /* Roxo Médio (era o 'pre' anterior) */
+    --prof-maiores-pre-border: #4A148C;
+    --prof-maiores-exil-bg: #8E44AD;  /* Roxo Médio */
     --prof-maiores-exil-text: #ffffff;
-    --prof-maiores-exil-border: #7D3C98; /* Roxo Escuro (Borda) */
+    --prof-maiores-exil-border: #7D3C98;
 
     /* Profetas Menores */
     --prof-menores-pre-bg: #27AE60;    /* Verde Médio */
@@ -74,7 +74,7 @@ header {
     color: var(--cor-header-text);
     padding: 15px 10px;
     text-align: center;
-    border-bottom: 3px solid var(--cor-borda-suave); /* Usei borda suave aqui */
+    border-bottom: 3px solid var(--cor-borda-suave);
 }
 
 h1 {
@@ -102,7 +102,7 @@ footer {
     border: 1px solid var(--cor-borda-suave);
     font-family: inherit;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    height: 500px; /* Altura inicial - ajuste se necessário */
+    height: 500px;
     background-color: #ffffff;
 }
 
@@ -147,7 +147,7 @@ footer {
     border-color: var(--historicos-pre-border);
     color: var(--historicos-pre-text);
 }
-.vis-item.históricos-pós-exílico {
+.vis-item.históricos-pós-exílicos {
     background-color: var(--historicos-pos-bg);
     border-color: var(--historicos-pos-border);
     color: var(--historicos-pos-text);
@@ -188,6 +188,16 @@ footer {
      text-align: center;
 }
 
+/* Cor mais escura para texto (nome E data) em itens PONTUAIS */
+.vis-item.vis-point {
+    color: #333333 !important; /* Texto cinza escuro para TODO o item pontual */
+}
+/* Garante opacidade total para DATAS em itens PONTUAIS */
+.vis-item.vis-point small {
+    opacity: 1 !important;
+}
+
+
 /* Item selecionado */
 .vis-item.vis-selected {
     background-color: var(--selected-bg);
@@ -215,9 +225,9 @@ footer {
 }
 .vis-time-axis .vis-text.vis-minor {
     font-weight: normal;
-    color: var(--cor-texto-secundario); /* Usei cor secundaria aqui */
+    color: var(--cor-texto-secundario);
 }
-.vis-grid.vis-minor { border-color: var(--cor-fundo-eixo); } /* Linha menor igual ao fundo */
+.vis-grid.vis-minor { border-color: var(--cor-fundo-eixo); }
 .vis-grid.vis-major { border-color: var(--cor-borda-suave); }
 
 
@@ -267,7 +277,7 @@ footer {
 }
 .modal-content p {
     line-height: 1.6;
-    color: var(--cor-texto-eixo); /* Usei cor do eixo aqui */
+    color: var(--cor-texto-eixo);
     font-size: 1em;
 }
 .close {
@@ -286,7 +296,7 @@ footer {
     cursor: pointer;
 }
 
-/* --- LEGENDA DE CORES --- */
+/* --- ESTILOS DA LEGENDA DE CORES --- */
 .legenda-cores {
     width: 90%;
     max-width: 1100px;
@@ -318,11 +328,37 @@ footer {
     gap: 10px 20px;
 }
 
-.legenda-cores li {
+/* Estilo base para item da legenda clicável */
+.legenda-cores li.legenda-item {
     display: flex;
     align-items: center;
+    padding: 5px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+    border: 1px solid transparent;
 }
 
+/* Estilo para itens INATIVOS na legenda (sem a classe .active) */
+.legenda-item:not(.active) {
+    opacity: 0.5;
+    background-color: #f1f3f5;
+    border: 1px dashed #adb5bd;
+}
+.legenda-item:not(.active):hover {
+    opacity: 0.7;
+    background-color: #e9ecef;
+}
+
+/* Estilo para itens ATIVOS na legenda (com a classe .active) */
+.legenda-item.active {
+     opacity: 1;
+}
+.legenda-item.active:hover {
+    background-color: #e9ecef; /* Fundo suave no hover do ativo */
+}
+
+/* Quadrado colorido da legenda */
 .cor-legenda {
     display: inline-block;
     width: 16px;
@@ -335,30 +371,15 @@ footer {
 
 /* Cores da Legenda (Usando Variáveis) */
 .cor-legenda.pentateuco { background-color: var(--pentateuco-bg); }
-.cor-legenda.historicos-pré-exílicos { background-color: var(--historicos-pre-bg); }
-.cor-legenda.historicos-pós-exilico { background-color: var(--historicos-pos-bg); }
+.cor-legenda.históricos-pré-exílicos { background-color: var(--historicos-pre-bg); }
+.cor-legenda.históricos-pós-exílicos { background-color: var(--historicos-pos-bg); }
 .cor-legenda.poéticos { background-color: var(--poeticos-bg); }
 .cor-legenda.profetas-maiores-pré-exílicos { background-color: var(--prof-maiores-pre-bg); }
-.cor-legenda.profetas-maiores-exilicos { background-color: var(--prof-maiores-exil-bg); }
+.cor-legenda.profetas-maiores-exílicos { background-color: var(--prof-maiores-exil-bg); }
 .cor-legenda.profetas-menores-pré-exílicos { background-color: var(--prof-menores-pre-bg); }
 .cor-legenda.profetas-menores-pós-exílicos { background-color: var(--prof-menores-pos-bg); }
 /* Adicione mais cores se tiver mais categorias */
 
-/* Cor mais escura para DATAS em itens PONTUAIS (duração zero) */
-.vis-item.vis-point small {
-    color: #333333 !important; /* Texto cinza escuro (ou use 'black') */
-    opacity: 1 !important;     /* Garante opacidade total para a data */
-}
-/* Cor mais escura para texto (nome E data) em itens PONTUAIS */
-.vis-item.vis-point {
-    color: #333333 !important; /* Texto cinza escuro para TODO o item pontual */
-}
-
-/* Garante opacidade total para DATAS em itens PONTUAIS (sobrescreve opacidade geral de small) */
-.vis-item.vis-point small {
-    /* A cor já é herdada da regra acima, não precisa de 'color' aqui */
-    opacity: 1 !important;
-}
 
 /* --- AJUSTES PARA MOBILE --- */
 @media (max-width: 767px) {
@@ -367,7 +388,7 @@ footer {
     }
     #timeline, .vis-timeline {
         width: 98%;
-        height: 450px; /* Altura ajustada para mobile */
+        height: 450px;
         margin: 15px auto;
     }
     .vis-item {
@@ -400,8 +421,15 @@ footer {
            justify-content: flex-start;
            gap: 8px 15px;
      }
-     .legenda-cores li {
-         width: 45%; /* Tenta colocar 2 colunas em mobile */
-         margin-bottom: 5px;
+     .legenda-cores li.legenda-item { /* Aplicar também a mobile */
+        width: 45%; /* Tenta colocar 2 colunas em mobile */
+        margin-bottom: 5px;
+        padding: 4px 6px; /* Padding menor em mobile */
+        font-size: 0.85em; /* Fonte menor na legenda mobile */
+     }
+     .cor-legenda {
+         width: 14px; /* Quadrado menor em mobile */
+         height: 14px;
+         margin-right: 5px;
      }
 }

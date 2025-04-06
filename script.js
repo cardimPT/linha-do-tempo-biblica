@@ -21,8 +21,14 @@ async function carregarLivros() {
     }
 }
 
+// Variáveis globais para a timeline e todos os itens (para acesso pelos filtros)
+let timeline = null;
+let allItems = [];
+let livrosBiblicos = []; // Guardar os dados originais aqui
+
+// Função principal
 async function criarLinhaDoTempo() {
-    const livrosBiblicos = await carregarLivros();
+    livrosBiblicos = await carregarLivros(); // Preenche a variável global
 
     // Verifica se livrosBiblicos é um array e não está vazio
     if (!Array.isArray(livrosBiblicos) || livrosBiblicos.length === 0) {
@@ -43,9 +49,16 @@ async function criarLinhaDoTempo() {
         return inicioA - inicioB;
     });
 
+    // Função auxiliar para formatar o ano (ex: -1500 -> "1500 a.C.")
+    function formatarAno(ano) {
+        if (ano < 0) { return `${Math.abs(ano)} a.C.`; }
+        else if (ano === 0) { return 'c. 1 d.C.'; }
+        else { return `${ano} d.C.`; }
+    }
 
-    const items = livrosBiblicos.map(livro => {
-        // Verificações robustas para garantir que os dados existem e são do tipo esperado
+    // Mapeia os dados para o formato do Vis.js
+    allItems = livrosBiblicos.map(livro => {
+        // Verificações robustas
         const inicio = (livro.periodo && typeof livro.periodo.inicio === 'number') ? livro.periodo.inicio : 0;
         const fim = (livro.periodo && typeof livro.periodo.fim === 'number') ? livro.periodo.fim : inicio;
         const nome = typeof livro.nome === 'string' ? livro.nome : 'Nome Indefinido';
@@ -53,41 +66,33 @@ async function criarLinhaDoTempo() {
         const descricao = typeof livro.descricao === 'string' ? livro.descricao : 'Sem descrição.';
         const categoria = typeof livro.categoria === 'string' ? livro.categoria : 'sem-categoria';
 
-
-        // Cria objetos Date a partir dos anos (negativos)
+        // Cria objetos Date
         const startDate = new Date(0);
         startDate.setUTCFullYear(inicio);
         const endDate = new Date(0);
         endDate.setUTCFullYear(fim);
 
-        // --- LÓGICA SIMPLIFICADA PARA O CONTEÚDO (SEMPRE COM DATAS) ---
+        // Define o conteúdo (sempre com datas para intervalos)
         const duracaoAnos = fim - inicio;
-
-        function formatarAno(ano) {
-            if (ano < 0) { return `${Math.abs(ano)} a.C.`; }
-            else if (ano === 0) { return 'c. 1 d.C.'; }
-            else { return `${ano} d.C.`; }
-        }
-
         let itemContent = "";
-
-        if (duracaoAnos <= 0) { // Se for um ponto no tempo
-            itemContent = `${nome}<br><small>${formatarAno(inicio)}</small>`;
-        } else { // Se for um intervalo (qualquer duração > 0)
-            itemContent = `${nome}<br><small>${formatarAno(inicio)} - ${formatarAno(fim)}</small>`;
+        if (duracaoAnos <= 0) {
+            itemContent = `${nome}<br>${formatarAno(inicio)}`; // Data pontual sem <small>
+        } else {
+            itemContent = `${nome}<br><small>${formatarAno(inicio)} - ${formatarAno(fim)}</small>`; // Intervalo com <small>
         }
-        // --- FIM DA LÓGICA SIMPLIFICADA ---
 
         return {
             id: abreviacao,
-            content: itemContent, // Usa o conteúdo calculado (sempre com datas para intervalos)
+            content: itemContent,
             start: startDate,
             end: endDate,
             type: (inicio === fim) ? 'point' : 'range',
-            title: `${nome} (${formatarAno(inicio)} a ${formatarAno(fim)}): ${descricao}`, // Tooltip melhorado com datas formatadas
-            className: categoria.toLowerCase().replace(/[\s:]+/g, '-') // Substitui espaços E dois-pontos por hífens
+            title: `${nome} (${formatarAno(inicio)} a ${formatarAno(fim)}): ${descricao}`, // Tooltip
+            className: categoria.toLowerCase().replace(/[\s:]+/g, '-'), // Gera classe CSS
+            // Guarda a categoria original para facilitar a filtragem posterior se necessário
+            originalCategory: categoria
         };
-    }).filter(item => item !== null); // Filtra itens que podem ter tido erro
+    }).filter(item => item !== null);
 
 
     const options = {
@@ -99,24 +104,24 @@ async function criarLinhaDoTempo() {
             minorLabels: { year: 'YYYY' }, // Formato sem 'G'
             majorLabels: { year: 'YYYY' }  // Formato sem 'G'
         },
-         margin: { // Manter a margem vertical pode ajudar
+         margin: {
              item: {
-                 vertical: 5
+                 vertical: 5 // Margem vertical entre itens empilhados
              }
          },
-        zoomMin: 1000 * 60 * 60 * 24 * 365 * 10, // Zoom mínimo: 10 anos
-        zoomMax: 1000 * 60 * 60 * 24 * 365 * 5000, // Zoom máximo: 5000 anos
+        zoomMin: 1000 * 60 * 60 * 24 * 365 * 10,
+        zoomMax: 1000 * 60 * 60 * 24 * 365 * 5000,
         min: new Date(0),
         max: new Date(0),
-        start: new Date(0), // Data inicial de visualização
-        end: new Date(0)   // Data final de visualização
+        start: new Date(0),
+        end: new Date(0)
     };
 
-    // Define as datas min/max/start/end nas opções
-    options.min.setUTCFullYear(-4100); // Um pouco antes da data mais antiga no PDF
-    options.max.setUTCFullYear(100);   // Um pouco depois de 0 AD
-    options.start.setUTCFullYear(-2100); // Ajustado para melhor visualização inicial
-    options.end.setUTCFullYear(-400);    // Ajustado
+    // Define as datas min/max/start/end
+    options.min.setUTCFullYear(-4100);
+    options.max.setUTCFullYear(100);
+    options.start.setUTCFullYear(-2100);
+    options.end.setUTCFullYear(-400);
 
     const timelineDiv = document.getElementById('timeline');
     if (!timelineDiv) {
@@ -124,10 +129,18 @@ async function criarLinhaDoTempo() {
         return;
     }
 
-    // Cria a linha do tempo
-    const timeline = new vis.Timeline(timelineDiv, items, options);
+    // Cria a linha do tempo - guarda a instância na variável global 'timeline'
+    timeline = new vis.Timeline(timelineDiv, allItems, options); // Mostra todos os itens inicialmente
 
-    // --- MODAL ---
+    // --- CONFIGURAR MODAL ---
+    setupModal();
+
+    // --- CONFIGURAR FILTROS DA LEGENDA ---
+    setupLegendFilters();
+}
+
+// Função para configurar o Modal (separada para organização)
+function setupModal() {
      const modal = document.getElementById('myModal');
      const closeButton = document.getElementsByClassName("close")[0];
      const modalTitle = document.getElementById('modal-title');
@@ -137,6 +150,7 @@ async function criarLinhaDoTempo() {
         timeline.on('select', function (properties) {
             const itemId = properties.items[0];
             if (itemId) {
+                // Procura nos dados originais
                 const livroSelecionado = livrosBiblicos.find(livro =>
                     (typeof livro.abreviacao === 'string' ? livro.abreviacao : 'ID') === itemId
                 );
@@ -147,6 +161,9 @@ async function criarLinhaDoTempo() {
                 } else {
                     console.warn("Livro selecionado com ID", itemId, "não encontrado nos dados.");
                 }
+            } else {
+                // Se clicar fora de um item (desselecionar), esconde o modal (opcional)
+                 // modal.style.display = "none";
             }
         });
         closeButton.onclick = function() { modal.style.display = "none"; }
@@ -154,8 +171,51 @@ async function criarLinhaDoTempo() {
      } else {
          console.warn("Elementos do modal não encontrados. A funcionalidade do modal não funcionará.");
      }
-    // --- FIM MODAL ---
 }
+
+// Função para configurar os Filtros da Legenda (separada para organização)
+function setupLegendFilters() {
+    const legendItems = document.querySelectorAll('.legenda-item');
+     if (legendItems.length === 0) {
+         console.warn("Itens da legenda não encontrados.");
+         return; // Sai se não houver legenda
+     }
+
+    // Função para atualizar a timeline com base nos filtros ativos na legenda
+    function updateTimelineFilter() {
+        const activeLegendItems = document.querySelectorAll('.legenda-item.active');
+        const activeCategoriesClasses = new Set();
+
+        activeLegendItems.forEach(item => {
+            const categoryName = item.dataset.categoria;
+            if (categoryName) {
+                activeCategoriesClasses.add(categoryName.toLowerCase().replace(/[\s:]+/g, '-'));
+            }
+        });
+
+        let itemsToShow;
+        if (activeCategoriesClasses.size === 0) { // Se nada estiver ativo
+            itemsToShow = allItems; // Mostra todos
+            legendItems.forEach(item => item.classList.add('active')); // Reativa legenda visualmente
+        } else {
+            itemsToShow = allItems.filter(item => activeCategoriesClasses.has(item.className));
+        }
+
+        if (timeline) { // Garante que a timeline existe
+             timeline.setItems(itemsToShow);
+             // timeline.fit(); // Descomente se quiser ajustar o zoom automaticamente
+        }
+    }
+
+    // Adiciona o event listener a cada item da legenda
+    legendItems.forEach(item => {
+        item.addEventListener('click', function() {
+            this.classList.toggle('active'); // Alterna o estado ativo/inativo
+            updateTimelineFilter(); // Atualiza a timeline
+        });
+    });
+}
+
 
 // Chama a função principal apenas quando o DOM estiver pronto
 if (document.readyState === 'loading') {
